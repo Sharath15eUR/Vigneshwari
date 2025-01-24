@@ -1,7 +1,0 @@
-vigneshwari-c@vigneshwari-c-VirtualBox:~$ mkdir -p dir1/dir2
-vigneshwari-c@vigneshwari-c-VirtualBox:~$ echo "This is a sample file." > dir1/dir2/file
-vigneshwari-c@vigneshwari-c-VirtualBox:~$ ln -s dir1/dir2/file dir1/link_to_file
-vigneshwari-c@vigneshwari-c-VirtualBox:~$ ls -l dir1
-total 4
-drwxrwxr-x 2 vigneshwari-c vigneshwari-c 4096 Jan 24 21:17 dir2
-lrwxrwxrwx 1 vigneshwari-c vigneshwari-c   14 Jan 24 21:18 link_to_file -> dir1/dir2/file
