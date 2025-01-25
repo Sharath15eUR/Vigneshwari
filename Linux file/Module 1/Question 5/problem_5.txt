@@ -1,0 +1,25 @@
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ mkdir dir1
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ cd dir1
+vigneshwari-c@vigneshwari-c-VirtualBox:~/dir1$ pwd
+/home/vigneshwari-c/dir1
+vigneshwari-c@vigneshwari-c-VirtualBox:~/dir1$ touch file1 file2 file3
+vigneshwari-c@vigneshwari-c-VirtualBox:~/dir1$ vi file1
+vigneshwari-c@vigneshwari-c-VirtualBox:~/dir1$ vi file2
+vigneshwari-c@vigneshwari-c-VirtualBox:~/dir1$ vi file3
+vigneshwari-c@vigneshwari-c-VirtualBox:~/dir1$ cat file1 file2 file3
+
+
+This is file1.
+
+
+This is file2.
+
+This is file3.
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~/dir1$ cd
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ls -lt dir1 > dir1/file4.txt
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ cat dir1/file4.txt
+total 0
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 0 Jan 24 21:10 file1
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 0 Jan 24 21:10 file2
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 0 Jan 24 21:10 file3
