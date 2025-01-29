@@ -1,0 +1,7 @@
+An operating system based on the Linux kernel is called a Distribution or Distro
+There are hundreds of Distributions available, some of which are designed to accomplish a sole purpose like running servers, act as network switches, etc.
+Naming the best Linux Distribution is difficult as they are made for different.
+Linux can be installed on your system via the below-mentioned methods:
+USB stick
+Live CD
+Virtual Installation

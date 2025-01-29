@@ -1,0 +1,36 @@
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ls
+all_files.txt  Desktop    Downloads  files_larger_than_1MB.txt  larger_than_1MB.txt  Music        Public     scripts    test1.txt  test4.txt             Videos
+assignment1    dir1       file       file.txt                   linux_training       Pictures     question1  snap       test2.txt  updated_config.txt
+config.txt     Documents  file4.txt  filtered_log.txt           log.txt              process.txt  question2  Templates  test3.txt  updated_config.txt.␋
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ cd scripts
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ pwd
+/home/vigneshwari-c/scripts
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ ls
+backup_manager.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ vi backup_manager.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ chmod 777 backup_manager.sh 
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ ls -l
+total 4
+-rwxrwxrwx 1 vigneshwari-c vigneshwari-c 1900 Jan 29 23:05 backup_manager.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ ./backup_manager.sh ~/Documents  ~/scripts/backup .txt
+Files to be backed up:
+- file1.txt (284 bytes)
+Copied: file1.txt
+- file2.txt (427 bytes)
+Copied: file2.txt
+- file3.txt (1111 bytes)
+Copied: file3.txt
+- file4.txt (1094 bytes)
+Copied: file4.txt
+Backup complete. Report saved to /home/vigneshwari-c/scripts/backup/backup_report.log
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ ls
+backup  backup_manager.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts$ cd backup
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts/backup$ ls
+backup_report.log  file1.txt  file2.txt  file3.txt  file4.txt
+vigneshwari-c@vigneshwari-c-VirtualBox:~/scripts/backup$ cat backup_report.log
+Backup Summary:
+Total files processed: 4
+Total size of files backed up: 2916 bytes
+Backup location: /home/vigneshwari-c/scripts/backup
+

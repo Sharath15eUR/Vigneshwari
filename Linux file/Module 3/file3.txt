@@ -1,0 +1,7 @@
+Linux is an open source operating system so user can change source code as per requirement whereas Windows OS is a commercial operating system so user doesn’t have access to source code.
+Linux is very well secure as it is easy to detect bugs and fix whereas Windows has a huge user base, so it becomes a target of hackers to attack windows system.
+Comparing Windows file system vs Linux file system, Linux runs faster even with older hardware whereas Windows are slower compared to Linux.
+Linux peripherals like hard drives, CD-ROMs, printers are considered files whereas Windows, hard drives, CD-ROMs, printers are considered as devices
+Linux files are ordered in a tree structure starting with the root directory whereas in Windows, files are stored in folders on different data drives like C: D: E:
+In Linux you can have 2 files with the same name in the same directory while in Windows, you cannot have 2 files with the same name in the same folder.
+In Linux you would find the system and program files in different directories whereas in Windows, system and program files are usually saved in C: drive.
