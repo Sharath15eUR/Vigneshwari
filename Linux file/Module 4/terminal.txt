@@ -1,0 +1,66 @@
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ cd Downloads
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads$ cd module_4
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ touch filter_parameter.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ ls
+filter_parameter.sh  input.txt
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ chmod 744 input.txt
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ chmod 744 filter_parameter.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ ls -l
+total 158732
+-rwxr--r-- 1 vigneshwari-c vigneshwari-c         0 Jan 31 11:08 filter_parameter.sh
+-rwxr--r-- 1 vigneshwari-c vigneshwari-c 162538952 Jan 31 09:22 input.txt
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ vi filter_parameter.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ ./filter_parameter.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ wc -l output.txt
+3666 output.txt
+vigneshwari-c@vigneshwari-c-VirtualBox:~/Downloads/module_4$ head -50 output.txt
+"frame.time": "Dec 31, 2024 12:50:25.890970000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.892357000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.928606000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.983072000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.983586000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.993337000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:25.994324000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.030963000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.085310000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.085817000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.095334000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.096326000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.133380000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.187886000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.188401000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.198261000 India Standard Time",
+"wlan.fc.type": "0",
+"wlan.fc.subtype": "8",
+"frame.time": "Dec 31, 2024 12:50:26.199336000 India Standard Time",
+"wlan.fc.type": "0",
