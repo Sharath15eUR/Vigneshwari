@@ -1,0 +1,13 @@
+Linux has a number of different versions to suit any type of user. From new users to hard-core users, you’ll find a “flavor” of Linux to match your needs. These versions are called distributions (or, in the short form, “distros”). Nearly every distribution of Linux can be downloaded for free, burned onto disk (or USB thumb drive), and installed (on as many machines as you like).
+
+Popular Linux distributions include:
+
+LINUX MINT
+MANJARO
+DEBIAN
+UBUNTU
+ANTERGOS
+SOLUS
+FEDORA
+ELEMENTARY OS
+OPENSUSE

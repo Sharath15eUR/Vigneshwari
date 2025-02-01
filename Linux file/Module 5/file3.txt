@@ -1,0 +1,6 @@
+Linux is also distributed under an open source license. Open source follows these key tenets:
+
+The freedom to run the program, for any purpose.
+The freedom to study how the program works, and change it to make it do what you wish.
+The freedom to redistribute copies so you can help your neighbor.
+The freedom to distribute copies of your modified versions to others.

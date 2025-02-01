@@ -1,0 +1,62 @@
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ cd module_5
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ls
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ vi file_analyzer.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ chmod 777 file_analyzer.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ls
+file_analyzer.sh
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ mkdir test_samples
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ cd test_samples
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5/test_samples$ vi file1
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5/test_samples$ vi file2
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5/test_samples$ vi file3
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5/test_samples$ vi file4
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5/test_samples$ vi file5
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5/test_samples$ cd
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ cd module_5
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ls -l test_samples
+total 20
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 466 Feb  2 01:09 file1
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 191 Feb  2 01:09 file2
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 368 Feb  2 01:09 file3
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 510 Feb  2 01:10 file4
+-rw-rw-r-- 1 vigneshwari-c vigneshwari-c 875 Feb  2 01:10 file5
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -d test_samples -k Linux
+test_samples/file5:2:If you’re looking for a server-only distribution, you will also want to decide if you need a desktop interface, or if you want to do this via command-line only. The Ubuntu Server does not install a GUI interface. This means two things your server won’t be bogged down loading graphics and you’ll need to have a solid understanding of the Linux command line. However, you can install a GUI package on top of the Ubuntu Server with a single command like sudo apt-get install ubuntu-desktop. System administrators will also want to view a distribution with regards to features. Do you want a server-specific distribution that will offer you, out of the box, everything you need for your server? If so, CentOS might be the best choice. Or, do you want to take a desktop distribution and add the pieces as you need them? If so, Debian or Ubuntu Linux might serve you well.
+test_samples/file3:2:Linux is also distributed under an open source license. Open source follows these key tenets:
+test_samples/file2:2:Linux has evolved into one of the most reliable computer ecosystems on the planet. Combine that reliability with zero cost of entry and you have the perfect solution for a desktop platform.
+test_samples/file1:2:Just like Windows, iOS, and Mac OS, Linux is an operating system. In fact, one of the most popular platforms on the planet, Android, is powered by the Linux operating system. An operating system is software that manages all of the hardware resources associated with your desktop or laptop. To put it simply, the operating system manages the communication between your software and your hardware. Without the operating system (OS), the software wouldn’t function.
+test_samples/file4:2:Linux has a number of different versions to suit any type of user. From new users to hard-core users, you’ll find a “flavor” of Linux to match your needs. These versions are called distributions (or, in the short form, “distros”). Nearly every distribution of Linux can be downloaded for free, burned onto disk (or USB thumb drive), and installed (on as many machines as you like).
+test_samples/file4:4:Popular Linux distributions include:
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -d test_samples -k unix
+No matches found in test_samples
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -d test_samples -k UBUNTU
+test_samples/file4:9:UBUNTU
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -d Fold -k linux
+Error: Directory 'Fold' not found!
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -f test_samples/file2 -k free
+Keyword 'free' not found in: test_samples/file2
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -f test_samples/file1 -k Linux
+(standard input):2:Just like Windows, iOS, and Mac OS, Linux is an operating system. In fact, one of the most popular platforms on the planet, Android, is powered by the Linux operating system. An operating system is software that manages all of the hardware resources associated with your desktop or laptop. To put it simply, the operating system manages the communication between your software and your hardware. Without the operating system (OS), the software wouldn’t function.
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -f test_samples/file4 -k flavor
+(standard input):2:Linux has a number of different versions to suit any type of user. From new users to hard-core users, you’ll find a “flavor” of Linux to match your needs. These versions are called distributions (or, in the short form, “distros”). Nearly every distribution of Linux can be downloaded for free, burned onto disk (or USB thumb drive), and installed (on as many machines as you like).
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ls
+errors.log  file_analyzer.sh  test_samples
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh --help
+Usage: ./file_analyzer.sh [OPTIONS]
+
+Options:
+  -d <directory>   Search for a keyword in a directory (recursive search)
+  -k <keyword>     Specify the keyword to search for
+  -f <file>        Search for a keyword in a specific file
+  --help           Display this help menu
+
+Examples:
+  ./file_analyzer.sh -d logs -k error
+  ./file_analyzer.sh -f script.sh -k TODO
+  ./file_analyzer.sh --help
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ ./file_analyzer.sh -r  test_directory/ -a embedUR
+Error: Invalid option '-r'
+vigneshwari-c@vigneshwari-c-VirtualBox:~/module_5$ cat errors.log
+Error: Directory 'Fold' not found!
+Error: Invalid option '-r'
+
