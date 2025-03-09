@@ -1,0 +1,2 @@
+By accessing the home router's web interface with a username and password, users can review various network statistics. The interface displays details such as the number of connected devices along with their names. Additionally, under the statistics tab, users can view each device's IP address and the amount of bandwidth it has consumed.
+Since, I don't have my own Wifi, I have taken the help from my friend to study and understand the router's web interface.
