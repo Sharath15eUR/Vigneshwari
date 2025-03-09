@@ -1,0 +1,45 @@
+Default gateway:
+->When the source wants to reach a destination which is outside its network then, the source uses the default gateway to forward the data and locate the   destination’s network so that data should reach its intended destination.
+-> It forwards the packet from client to other networks.
+->It allows communication of computers on other networks.
+->The default gateways are used when the host doesn’t know about the destination’s network .
+->steps:
+case : A laptop (192.168.1.100) wants to access Google (142.250.183.110).
+a.The laptop does not know how to reach 142.250.183.110 directly, so it sends the request to the default gateway (192.168.1.1).
+b.Default Gateway performs NAT and converts the private ip of the LAN into public ip.Now, the request goes to Google's servers.
+c.The destination(google) responds and this response is received by the default gateway.
+d.Default gateway again translates the public ip into private ip by NAT so that it reaches the laptops or PC successfully.
+
+
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ip route
+192.168.1.0/24 dev enp0s3 proto kernel scope link src 192.168.1.100 
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 enp0s3
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ netstat -r
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+192.168.1.0     0.0.0.0         255.255.255.0   U         0 0          0 enp0s3
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ netstat -rn
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+192.168.1.0     0.0.0.0         255.255.255.0   U         0 0          0 enp0s3
+
+###To check if it is reachable or not :
+We can use ping command with the default gateway to check connectivity.
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ping -c 6 192.168.1.100
+PING 192.168.1.100 (192.168.1.100) 56(84) bytes of data.
+64 bytes from 192.168.1.100: icmp_seq=1 ttl=64 time=0.051 ms
+64 bytes from 192.168.1.100: icmp_seq=2 ttl=64 time=0.093 ms
+64 bytes from 192.168.1.100: icmp_seq=3 ttl=64 time=0.103 ms
+64 bytes from 192.168.1.100: icmp_seq=4 ttl=64 time=0.766 ms
+64 bytes from 192.168.1.100: icmp_seq=5 ttl=64 time=0.057 ms
+64 bytes from 192.168.1.100: icmp_seq=6 ttl=64 time=0.073 ms
+
+--- 192.168.1.100 ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5115ms
+rtt min/avg/max/mdev = 0.051/0.190/0.766/0.258 ms
+

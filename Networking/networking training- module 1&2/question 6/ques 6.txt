@@ -1,0 +1,53 @@
+1. VNC:
+-> It stands for virtual network computing.
+-> It is a cross platform screen sharing system. Here a computer’s screen, keyboard, and mouse can be used from a distance by a remote user from a secondary device as though they were sitting right in front of it.
+-> VNC Connect offers seamless remote control, compatibility across multiple platforms, support for both attended and unattended access, file transfer capabilities, multilingual support, online team management, and virtual desktop management for Linux.
+-> It is GUI-based, Open Source.Compatible with Windows,Linux,mac.
+-> steps :
+          1.Install VNC server.
+          2. Set VNC password.
+          3.Start VNC server.
+          4.Find VNC port.
+          5.Connect from VNC viewer
+
+2. ANYDESK:
+-> AnyDesk is a lightweight, fast, and secure remote desktop software that allows users to access another system remotely. 
+-> It works across Windows, Linux,macOS, Android, and iOS.
+->steps:
+         1. Install AnyDesk on both local and remote systems
+         2.Start AnyDesk and find the remote AnyDesk ID.
+         3.Enter the ID on your local system and request access.
+         4.Approve the connection on the remote system.
+         5.Use unattended access for automatic remote login.
+-> It is more secure than VNC.
+-> It works on low bandwidth and connects without user approval.
+
+
+3.TEAMVIEWER:
+-> TeamViewer is a remote access and control software that lets users connect to and manage devices from anywhere in the world.
+-> it has features like video calls, online meetings, end protection from threats, file sharing etc.
+-> It supports Windows, Linux, macOS, Android, and iOS.
+-> steps:
+         1.Download TeamViewer , Install and launch application on both the systems.
+         2.The TeamViewer ID and password will be displayed on the main screen by teamviewer info command.
+         3.On the local computer, open TeamViewer,Enter the Remote System’s TeamViewer ID in the “Partner ID” field and connect.
+         4.Enter the Remote System’s Password when prompted.
+         5.After authentication, you will have the full access.
+
+
+4.REMOTE DESKTOP CONNECTION:
+-> Remote Desktop Connection (RDP) allows users to connect to a remote computer and control it as if they were physically present. 
+-> RDP is built into Windows but can also be used to connect to Linux machines 
+->Steps:
+       1.Enable Remote Desktop:
+            1.a.Go to Settings → System → Remote Desktop
+            1.b Toggle Enable Remote Desktop → Click Confirm
+       2.Allow RDP through Firewall:
+            2.a Open Windows Defender Firewall
+            2.b Go to Allow an app or feature through Windows Defender Firewall.
+            2.c Enable Remote Desktop for Private and Public networks.
+      3.Open RDC.
+      4.Enter the IP address or computer name of the remote system.
+      5.Click Connect and enter username & password.
+->It is most secure compared to the above.
+-> We can organise multiple sessions at once.

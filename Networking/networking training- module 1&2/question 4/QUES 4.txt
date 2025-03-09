@@ -1,0 +1,229 @@
+PING:
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:1a:65:4c brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 85341sec preferred_lft 85341sec
+    inet6 fd00::ed46:7c85:605d:b0af/64 scope global temporary dynamic 
+       valid_lft 85851sec preferred_lft 13851sec
+    inet6 fd00::a00:27ff:fe1a:654c/64 scope global dynamic mngtmpaddr 
+       valid_lft 85851sec preferred_lft 13851sec
+    inet6 fe80::a00:27ff:fe1a:654c/64 scope link 
+       valid_lft forever preferred_lft forever
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ping google.com
+PING google.com (142.250.193.174) 56(84) bytes of data.
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=1 ttl=255 time=15.6 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=2 ttl=255 time=6.76 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=3 ttl=255 time=9.06 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=4 ttl=255 time=6.72 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=5 ttl=255 time=10.8 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=6 ttl=255 time=10.9 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=7 ttl=255 time=5.07 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=8 ttl=255 time=9.01 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=9 ttl=255 time=10.3 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=10 ttl=255 time=11.4 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=11 ttl=255 time=12.6 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=12 ttl=255 time=11.3 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=13 ttl=255 time=6.35 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=14 ttl=255 time=8.82 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=15 ttl=255 time=13.7 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=16 ttl=255 time=32.8 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=17 ttl=255 time=22.3 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=18 ttl=255 time=43.1 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=19 ttl=255 time=8.75 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=20 ttl=255 time=14.5 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=21 ttl=255 time=35.6 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=22 ttl=255 time=12.7 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=23 ttl=255 time=7.09 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=24 ttl=255 time=13.7 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=25 ttl=255 time=6.76 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=26 ttl=255 time=9.24 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=27 ttl=255 time=13.9 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=28 ttl=255 time=59.0 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=29 ttl=255 time=7.06 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=30 ttl=255 time=9.30 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=31 ttl=255 time=9.20 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=32 ttl=255 time=7.60 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=33 ttl=255 time=11.3 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=34 ttl=255 time=6.94 ms
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=35 ttl=255 time=10.5 ms
+^C
+--- google.com ping statistics ---
+35 packets transmitted, 35 received, 0% packet loss, time 34097ms
+rtt min/avg/max/mdev = 5.067/13.986/58.959/11.319 ms
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ping -c 2 www.geeksforgeeks.org
+PING d1t2f3swasxi04.cloudfront.net (108.158.251.45) 56(84) bytes of data.
+64 bytes from server-108-158-251-45.maa51.r.cloudfront.net (108.158.251.45): icmp_seq=1 ttl=255 time=6.07 ms
+64 bytes from server-108-158-251-45.maa51.r.cloudfront.net (108.158.251.45): icmp_seq=2 ttl=255 time=8.04 ms
+
+--- d1t2f3swasxi04.cloudfront.net ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 6.074/7.055/8.037/0.981 ms
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ping -s 40 -c 5 www.google.com
+PING www.google.com (142.250.182.132) 40(68) bytes of data.
+48 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=1 ttl=255 time=5.56 ms
+48 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=2 ttl=255 time=11.8 ms
+48 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=3 ttl=255 time=6.70 ms
+48 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=4 ttl=255 time=6.23 ms
+48 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=5 ttl=255 time=10.8 ms
+
+--- www.google.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4009ms
+rtt min/avg/max/mdev = 5.564/8.201/11.763/2.542 ms
+vigneshwari-c@vigneshwari-c-VirtualBox:~$  ping -c 6 -i 1.5 www.google.com
+PING www.google.com (142.250.182.132) 56(84) bytes of data.
+64 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=1 ttl=255 time=5.93 ms
+64 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=2 ttl=255 time=8.10 ms
+64 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=3 ttl=255 time=14.7 ms
+64 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=4 ttl=255 time=10.3 ms
+64 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=5 ttl=255 time=45.8 ms
+64 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=6 ttl=255 time=25.3 ms
+
+--- www.google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 7582ms
+rtt min/avg/max/mdev = 5.926/18.354/45.820/13.787 ms
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ping -c 6 -i 1.5 -s 64  www.google.com
+PING www.google.com (142.250.182.132) 64(92) bytes of data.
+72 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=1 ttl=255 time=6.39 ms
+72 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=2 ttl=255 time=8.87 ms
+72 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=3 ttl=255 time=9.70 ms
+72 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=4 ttl=255 time=9.54 ms
+72 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=5 ttl=255 time=6.96 ms
+72 bytes from maa05s22-in-f4.1e100.net (142.250.182.132): icmp_seq=6 ttl=255 time=8.42 ms
+
+--- www.google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 7516ms
+rtt min/avg/max/mdev = 6.385/8.309/9.697/1.243 ms
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ping -c 5 -q www.google.com
+PING www.google.com (142.250.182.132) 56(84) bytes of data.
+
+--- www.google.com ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4010ms
+rtt min/avg/max/mdev = 5.627/9.793/15.191/3.721 ms
+
+
+arp:
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ arp -e
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.0.2.3                 ether   52:55:0a:00:02:03   C                     enp0s3
+_gateway                 ether   52:55:0a:00:02:02   C                     enp0s3
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ arp -a
+? (10.0.2.3) at 52:55:0a:00:02:03 [ether] on enp0s3
+_gateway (10.0.2.2) at 52:55:0a:00:02:02 [ether] on enp0s3
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.0.2.3                 ether   52:55:0a:00:02:03   C                     enp0s3
+10.0.2.2                 ether   52:55:0a:00:02:02   C                     enp0s3
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo arp -d 10.0.2.3
+[sudo] password for vigneshwari-c: 
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.0.2.2                 ether   52:55:0a:00:02:02   C                     enp0s3
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo arp -s 192.168.1.100 00:1A:2B:3C:4D:5E
+
+SIOCSARP: Network is unreachable
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo arp -s 10.0.2.3 52:55:0a:00:02:03
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ arp -n
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.0.2.3                 ether   52:55:0a:00:02:03   CM                    enp0s3
+10.0.2.2                 ether   52:55:0a:00:02:02   C                     enp0s3
+
+
+ifconfig:
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:fe1a:654c  prefixlen 64  scopeid 0x20<link>
+        inet6 fd00::a00:27ff:fe1a:654c  prefixlen 64  scopeid 0x0<global>
+        inet6 fd00::ed46:7c85:605d:b0af  prefixlen 64  scopeid 0x0<global>
+        ether 08:00:27:1a:65:4c  txqueuelen 1000  (Ethernet)
+        RX packets 280548  bytes 396874659 (396.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 72426  bytes 4866001 (4.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 94729  bytes 8547723 (8.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 94729  bytes 8547723 (8.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ifconfig enp0s3
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:fe1a:654c  prefixlen 64  scopeid 0x20<link>
+        inet6 fd00::a00:27ff:fe1a:654c  prefixlen 64  scopeid 0x0<global>
+        inet6 fd00::ed46:7c85:605d:b0af  prefixlen 64  scopeid 0x0<global>
+        ether 08:00:27:1a:65:4c  txqueuelen 1000  (Ethernet)
+        RX packets 280562  bytes 396876133 (396.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 72440  bytes 4867315 (4.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo ifconfig enp0s3  up
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo ifconfig enp0s3 up
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo ifconfig enp0s3 down
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 94729  bytes 8547723 (8.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 94729  bytes 8547723 (8.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ifconfig eth0 192.168.1.100
+SIOCSIFADDR: Operation not permitted
+eth0: ERROR while getting interface flags: No such device
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ifconfig enp0s3  192.168.1.100
+SIOCSIFADDR: Operation not permitted
+SIOCSIFFLAGS: Operation not permitted
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ifconfig enp0s3 192.168.1.100
+SIOCSIFADDR: Operation not permitted
+SIOCSIFFLAGS: Operation not permitted
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo ifconfig enp0s3 192.168.1.100
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.100  netmask 255.255.255.0  broadcast 192.168.1.255
+        ether 08:00:27:1a:65:4c  txqueuelen 1000  (Ethernet)
+        RX packets 280568  bytes 396876968 (396.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 72458  bytes 4869155 (4.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 94729  bytes 8547723 (8.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 94729  bytes 8547723 (8.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+PARAMETERS OF IFCONFIG:
+•	Flags: Interface status	-UP, LOOPBACK, RUNNING
+•	MTU(Maximum Transmission Unit) 	-65536 bytes
+•	IPv4 Address (inet)-Localhost IP address-127.0.0.1
+•	Subnet Mask (netmask)-Defines the network range-255.0.0.0
+•	IPv6 Address (inet6)	IPv6 localhost	::1
+•	RX Packets-Received packets count-94729
+•	RX Bytes-Total data received-8.5 MB
+•	TX Packets-Transmitted packets count-94729
+•	TX Bytes-Total data sent-8.5 MB
+•	Errors, Drops, Overruns, Collisions (RX errors, TX errors, dropped, overruns, collisions) – 0 errors.
+
+

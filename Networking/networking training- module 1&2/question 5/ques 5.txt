@@ -1,0 +1,23 @@
+5. Understand what happens when duplicate IPs configured in a network.
+
+When two devices in a network are assigned the same IP address, it causes an IP address conflict.Here,
+Both devices may lose network access 
+Intermittent connectivity issues 
+network instability.
+
+Reasons for occurance:
+1. Two systems sharing a same network,attempting to use same ip.
+2.misconfiguration of static ip addresses, issued by DHCP server.
+3.Manually assigning an ip which is in use to another system.
+
+How can we detect?
+1.by using ARP command.
+When a device joins the network, it broadcasts an ARP request to check if the IP is in use.If another device responds with the same IP, a conflict is detected.
+2. ip addr show : Here we can look for the duplicate ip's.
+3.ping: if duplicate ip's persist then one system will respond and other drops packets leading to losses. 
+
+How to overcome?
+Identify the devices that are experiencing the conflict
+Restart the devices and router.
+If the problem persists, check the DHCP server settings to ensure it is properly assigning unique IP addresses. 
+Assign a non-conflicting IP address to one of the devices

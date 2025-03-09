@@ -1,0 +1,27 @@
+Explain how a DHCP server assigns IP addresses to devices in your network.
+
+->Every device that is part of a network needs a unique IP address to communicate with other network devices. These IP addresses are assigned either through Static IP or Dynamic Host Configuration Protocol (DHCP).
+->The DHCP follows a DORA process to assign IP addresses to the network devices. 
+->This process is based on a client-server model.
+
+->It involves an exchange of 4 types of messages:
+a.Discover
+b.Offer
+c.Request
+d.Acknowledgement
+
+a.Discover:
+When a device joins the network, it broadcasts a DHCP Discover message to find available DHCP servers through DHCPDISCOVER.This message is sent to 255.255.255.255 (broadcast address) since the client doesn’t have an IP yet.
+
+b.Offer:
+The DHCP server receives the Discover request and offers an available IP from its IP pool by DHCPOFFER.This contains offered ip address,subnet mask,default gateway etc.
+
+c.Request:
+The client accepts the IP offer by sending a DHCP Request message back to the DHCP server through DHCPREQUEST.This message confirms that the client wants to use the offered IP.
+
+d.Acknowledgement:
+The DHCP server confirms the assignment with a DHCP Acknowledgment message by DHCPACK.
+
+->Importance of DORA process:
+a.Prevents IP conflicts
+b.Ensures automatic IP assignment

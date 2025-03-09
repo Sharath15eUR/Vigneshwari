@@ -1,0 +1,107 @@
+FTP:
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo apt install vsftpd -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+vsftpd is already the newest version (3.0.5-0ubuntu3.1).
+0 upgraded, 0 newly installed, 0 to remove and 269 not upgraded.
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo useradd ftpuser
+useradd: user 'ftpuser' already exists
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo passwd ftpuser
+New password: 
+Retype new password: 
+passwd: password updated successfully
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo nano /etc/vsftpd.conf 
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo systemctl restart vsftpd
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo systemctl enable vsftpd
+Synchronizing state of vsftpd.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable vsftpd
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo ufw allow 21/tcp
+Skipping adding existing rule
+Skipping adding existing rule (v6)
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ftp 10.0.2.15
+Connected to 10.0.2.15.
+220 (vsFTPd 3.0.5)
+Name (10.0.2.15:vigneshwari-c): ftpuser
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> put file1.txt
+local: file1.txt remote: file1.txt
+229 Entering Extended Passive Mode (|||5840|)
+150 Ok to send data.
+100% |********************************************************************************************|    57       32.00 KiB/s    00:00 ETA
+226 Transfer complete.
+57 bytes sent in 00:00 (24.05 KiB/s)
+ftp> bye
+221 Goodbye.
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo ls -l /home/ftpuser/
+total 4
+-rw------- 1 ftpuser ftpuser 57 Mar  3 20:33 file1.txt
+-rw------- 1 ftpuser ftpuser  0 Mar  3 20:10 testfile.txt
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ get testfile.txt
+Command 'get' not found, but there are 18 similar ones.
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ftp 10.0.2.15
+Connected to 10.0.2.15.
+220 (vsFTPd 3.0.5)
+Name (10.0.2.15:vigneshwari-c): ftpuser
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> get file1.txt
+local: file1.txt remote: file1.txt
+229 Entering Extended Passive Mode (|||58387|)
+150 Opening BINARY mode data connection for file1.txt (57 bytes).
+100% |********************************************************************************************|    57       28.54 KiB/s    00:00 ETA
+226 Transfer complete.
+57 bytes received in 00:00 (15.91 KiB/s)
+ftp> bye
+221 Goodbye.
+
+
+
+SFTP:
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo adduser sftpuser
+[sudo] password for vigneshwari-c: 
+info: Adding user `sftpuser' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `sftpuser' (1002) ...
+info: Adding new user `sftpuser' (1002) with group `sftpuser (1002)' ...
+info: Creating home directory `/home/sftpuser' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for sftpuser
+Enter the new value, or press ENTER for the default
+	Full Name []:        
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] Y
+info: Adding new user `sftpuser' to supplemental / extra groups `users' ...
+info: Adding user `sftpuser' to group `users' ...
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sftp sftpuser@10.0.2.15
+sftpuser@10.0.2.15's password: 
+Connected to 10.0.2.15.
+sftp> put file.txt
+Uploading file.txt to /home/sftpuser/file.txt
+file.txt                                                                                                                                              100%    0     0.0KB/s   00:00    
+sftp> exit
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sftp sftpuser@10.0.2.15
+sftpuser@10.0.2.15's password: 
+Connected to 10.0.2.15.
+sftp> get testfile.txt
+File "/home/sftpuser/testfile.txt" not found.
+sftp> get file.txt
+Fetching /home/sftpuser/file.txt to file.txt
+sftp> exit
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ ls -l file.txt
+-rwxrwxrwx 1 vigneshwari-c vigneshwari-c 0 Mar  3 21:05 file.txt

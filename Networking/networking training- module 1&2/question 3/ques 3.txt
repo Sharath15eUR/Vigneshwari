@@ -1,0 +1,50 @@
+Wireshark:
+
+-> Wireshark is a free and open-source network protocol analyzer used for capturing and analyzing network traffic in real time. 
+->Captures data from wired, wireless, and even USB networks.
+-> Supports hundreds of protocols (TCP, UDP, HTTP, DNS, Telnet, etc.).
+->Easily filter traffic using display filters (e.g., tcp.port == 23 for Telnet).
+->View packet details at different layers (Ethernet, IP, TCP/UDP, etc.).
+
+usecase:
+->The interface that i have used for capturing packets is enp0s3.
+
+active filters:
+->ip.src == 10.2.0.15 (filtering based on source ip)
+->ip.dst == 192.162.1.100 (filtering based on destination ip)
+->tcp( to check for protocol)
+->ip.addr == 192.16.0.100 (check based on ip address)
+
+
+
+
+tcpdump:
+
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo tcpdump -c 10 -i enp0s3
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+00:27:57.478338 IP vigneshwari-c-VirtualBox.52726 > 10.0.2.3.domain: 747+ [1au] A? content-signature-2.cdn.mozilla.net. (64)
+00:27:57.481158 IP vigneshwari-c-VirtualBox.52752 > 10.0.2.3.domain: 3181+ [1au] AAAA? content-signature-2.cdn.mozilla.net. (64)
+00:27:57.499537 IP 10.0.2.3.domain > vigneshwari-c-VirtualBox.52726: 747 3/0/1 CNAME content-signature-chains.prod.autograph.services.mozaws.net., CNAME prod.content-signature-chains.prod.webservices.mozgcp.net., A 34.160.144.191 (218)
+00:27:57.507670 IP 10.0.2.3.domain > vigneshwari-c-VirtualBox.52752: 3181 3/0/1 CNAME content-signature-chains.prod.autograph.services.mozaws.net., CNAME prod.content-signature-chains.prod.webservices.mozgcp.net., AAAA 2600:1901:0:92a9:: (230)
+00:27:57.537585 IP vigneshwari-c-VirtualBox.34006 > 191.144.160.34.bc.googleusercontent.com.https: Flags [S], seq 1976232032, win 64240, options [mss 1460,sackOK,TS val 3656721355 ecr 0,nop,wscale 7], length 0
+00:27:57.579549 IP 191.144.160.34.bc.googleusercontent.com.https > vigneshwari-c-VirtualBox.34006: Flags [S.], seq 1449344001, ack 1976232033, win 65535, options [mss 1460], length 0
+00:27:57.580293 IP vigneshwari-c-VirtualBox.34006 > 191.144.160.34.bc.googleusercontent.com.https: Flags [.], ack 1, win 64240, length 0
+00:27:57.582540 IP vigneshwari-c-VirtualBox.34006 > 191.144.160.34.bc.googleusercontent.com.https: Flags [P.], seq 1:221, ack 1, win 64240, length 220
+00:27:57.583261 IP 191.144.160.34.bc.googleusercontent.com.https > vigneshwari-c-VirtualBox.34006: Flags [.], ack 221, win 65535, length 0
+00:27:57.595031 IP vigneshwari-c-VirtualBox.50784 > 10.0.2.3.domain: 56472+ [1au] PTR? 3.2.0.10.in-addr.arpa. (50)
+10 packets captured
+34 packets received by filter
+0 packets dropped by kernel
+vigneshwari-c@vigneshwari-c-VirtualBox:~$ sudo tcpdump -c 10 -i enp0s3 -w pckts.pcap
+tcpdump: listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+10 packets captured
+74 packets received by filter
+0 packets dropped by kernel
+
+cisco packet tracer:
+
+-> Cisco Packet Tracer is a network simulation tool designed by Cisco to help users learn, design, and troubleshoot computer networks.
+-> Configure routers, switches etc. in a network.
+-> We can view how packets move through a network.
+-> It allows users to create virtual network topologies.
