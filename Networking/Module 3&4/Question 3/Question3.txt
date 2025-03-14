@@ -1,1 +1,28 @@
+Steps followed:
+
+Windows:
+Assigning ip manually:
+->In Cisco Packet Tracer, a simulation was set up with two PCs and one router.
+->To assign a static IP, subnet mask, and gateway to each PC, click on the PC, navigate to the Desktop tab, and open IP Configuration.
+->To configure the switch, access the CLI, enable the interfaces connected to the PCs.
+
+Modifying MAC Address:
+-> To change the MAC address of a PC, select the PC, go to the Config tab, and choose the network interface.
+-> Modify the MAC address in the designated field.
+-> The updated MAC address can be verified using the ipconfig /all command in the Command Prompt.
+
+To check connectivity:
+-> Use the ping command in the Command Prompt to test connectivity between PCs by sending packets to their IP addresses.
+-> On the router’s CLI, the show interfaces brief command displays the status of connected devices and their interfaces.
+
+Linux:
+->First I used ifconfig command to display all the interfaces, then i used :
+              sudo ifconfig enp0s3 192.168.1.100 netmask 255.255.255.0 up
+to assign the manual ip statically.
+->Then i used 
+             sudo ifconfig enpos3 hw ether 00:41:0B:5D:C8:95
+to change the MAC address.
+->The changed ip and MAC can be visualized using ifconfig enp0s3 command.
+->Then I used ping to verify connectivity, on using the old ip the packet transmission is lost and on providing the current new ip the transmission takes place.
+
 
