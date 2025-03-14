@@ -1,1 +1,12 @@
+MAC Address table:
+
+A MAC address table is used network switches to store MAC addresses and their corresponding interfaces. It helps the switch efficiently move to the correct destination.
+
+Process:
+->	When a switch receives a frame, it checks the source MAC address and associates it with the incoming port.The switch adds or updates this entry in the MAC address table.
+->  If the destination MAC address is in the table, the switch forwards the frame to the correct port.If the MAC address is unknown, the switch sends the frame to all portsexcept the incoming one.
+-> MAC table entries expire after a certain period if no traffic is received from that MAC address.This prevents stale entries and allows the table to update dynamically.
+
+A bridge interface (br0) was configured to function as a switch, enabling network traffic flow. The available network interfaces were checked, and the system’s switch functionality was verified. A physical interface was added to the bridge to simulate switch ports. Finally, the MAC address table was inspected using `bridge fdb show` to view learned addresses.
+
 
