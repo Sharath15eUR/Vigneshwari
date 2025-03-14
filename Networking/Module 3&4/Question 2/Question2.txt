@@ -1,1 +1,20 @@
+Steps followed:
+> I have created a small network setup using a PC and 3 switches.
+> I have assigned ip to individual PC's :
+      PC 1 : ip 192.168.10.1
+      PC 2 : ip 192.168.10.2
+      PC 3 : ip 192.168.10.3
+> I started to capture the packets and analyzing it in Wireshark with ethernet as my interface.
+> I used ping command in PC 1 for pinging PC2 and PC 1 to check for packet transfer.
+> I have obtained the packet transfer window in wireshark.
+
+Following observations are made:
+Destination MAC Address: 00:50:79:66:68:01 belongs to the receiving device.
+Source MAC Address: 00:50:79:66:68:00 belongs to the sending device.
+Ethertype: 0x0800 (IPv4) 
+Payload: The encapsulated IP packet, which further contains the ICMP request.
+Frame Check Sequence (FCS): Not verified in this capture.
+Checksum Status: Good
+Type of request : It is an ICMP request, because the frame has an EtherType of 0x0800, which corresponds to IPv4.
+
 
