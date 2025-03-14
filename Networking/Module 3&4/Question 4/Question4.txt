@@ -1,1 +1,9 @@
-
+Steps followed:
+->First we are connecting a simple setup using a switch and 2 PC's.
+->We are providing the ip address statically to both the systems.
+on pinging for packet transfer, if the ip address is assigned correctly, then the packet reaches the destination without any packet loss.
+->For checking purpose we are providing an incorrect ip, so the packet will not be deliverd rather it will be lost and request time out message pops up.
+->we can use traceroute command:
+         tracert <ip-address>
+to check for the route the packets are transferred.It can trace upto 30 times.
+->On providing a correct ip, the packet is delivered successfully and taking a single iteration if we execute with the tracert cmd.
