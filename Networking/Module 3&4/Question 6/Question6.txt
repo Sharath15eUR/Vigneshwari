@@ -1,1 +1,32 @@
+Q6. Describe how you would configure a basic LAN interface using the ip command in Linux.
+
+To configure a basic LAN interface in Linux using the ip command, the following steps are follwed:
+->Check for interfaces:
+  We need to check for  all the available interfaces, using the command:
+                           ip link show
+
+->To check whether the interface is up or down:
+ We can check whether the required interface like enpos3,eth0 etc. are up or down.If its down we have to make that active, by giving the command
+                        sudo ip link set enp0s3 up
+ if it is enp0s3 is down , this command brings the enp0s3 ato active state
+
+->To assign ip statically:
+Next, I configure the network interface with a specific IP address. In this case, I assign 192.168.1.20 with a subnet mask of 255.255.255.0 using the following command:
+                        ip addr add 192.168.1.20/24 dev enp0s3
+
+->Default gateway:
+We can set the default gateway (e.g., 192.168.1.1) by using the command,
+                  sudo ip route add default via 192.168.1.1
+         
+->Verification : 
+To check if the IP address and routes are set correctly, I used the commands, 
+                        ip addr show enp0s3  
+                        ip route show
+  
+-> Connectivity:
+The connectivity can be checked using th ping command, which is:
+                        ping 192.168.1.1
+This setup ensures the LAN interface is properly configured for communication within the network
+
+ 
 
