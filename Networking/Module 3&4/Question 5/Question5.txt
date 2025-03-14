@@ -1,1 +1,20 @@
+Q5. Research the Linux kernel's handling of Ethernet devices and network interfaces. Write a short report on how the Linux kernel supports Ethernet communication .(refer kernel.org documentation)
 
+The Linux kernel helps computers communicate over Ethernet by managing network connections, processing data, and supporting network rules. It ensures smooth data transfer by working with network drivers, protocols, and system tools. Acting as a link between hardware and software, the kernel allows applications to send and receive data efficiently, ensuring a stable network connection.
+
+ The ethernet works in linux by means of :
+-> Network Interface & Drivers (by using NIC cards and drivers)
+-> IP Address & Network Configuration (The Ethernet interface needs an IP address to communicate.We can provide our manual ip by sudo ip addr add 192.168.1.100/24 dev enp0s3)
+-> Sending & Receiving Data(Data is broken into packets and sent through Ethernet cables.The Linux network stack processes packets based on routing tables and firewall rules.The MAC (Media Access Control) address identifies devices on the network.) 
+-> Packet Routing & Processing (Linux determines how to forward packets using a routing table.The kernel processes using protocols like TCP/UDP)
+-> Monitoring & Troubleshooting (we can use tcpdump , ping etc. to monitor and check the connectivity)
+
+It uses layered architecture :
+->	Physical Layer – Responsible for transmitting raw data over physical cables and Network Interface Cards (NICs).
+->	Data Link Layer – Manages data from the physical layer using device drivers and identifies the destination using MAC addresses.
+->	Network Layer (IPv4/IPv6 Routing) – Routes data based on the MAC table and IP addresses. The ARP table assists in mapping IPs to MAC addresses.
+->	Transport Layer – Uses TCP/UDP protocols for packet transport, handling flow control, congestion control, and error management. It also breaks requests into smaller packets for transmission.
+->	Application Layer – Supports user programs that use system calls like send(), receive(), and socket() to transmit data over the network.
+
+Process:
+When an application sends data, it goes through the socket API, where it is turned into packets following network rules. The Ethernet driver works with the Network Interface Card  to send these packets over the network. When a packet arrives, the NIC detects it and passes it to the Ethernet driver, which sends it to the kernel. The kernel processes the packet, extracts the needed data, and delivers it to the right application using the socket API. This process ensures smooth and reliable network communication.
