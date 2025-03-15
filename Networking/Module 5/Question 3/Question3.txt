@@ -1,1 +1,22 @@
+Manually configure static IPs on the client devices(like Pc or your mobile phone) and verify connectivity using ping.
+Static IP:
+->A static IP address is a fixed, manually assigned IP address that does not change over time.
+->Unlike a dynamic IP address, which is assigned automatically by a DHCP server and may change periodically, a static IP remains constant.
 
+Steps:
+-> Firt iam going to assign the static ip address in my windows using the following flow
+     Control panel -> Network and Internet -> Network and sharing centre -> Change adapter setting
+->From the list of available interfaces, I have chosen Wifi to be my interface.
+-> After choosing Wifi, I have changed the TCP/IPv4 properties and assigned values like:
+              Ipv4: 192.168.1.101
+              Subnet:255.255.255.0
+              Default Gateway:192.168.1.100
+              DNS: 8.8.8.8
+->After applying the chanegs, i moved to my windows cmd to check for it by using ipconfig command.
+->To check the connectivity i used ping to connect to the default gateway and it showed proper transmission of the packets.
+->I want to check whether the network is working or not so i used ping command to check for it.
+            ping 192.168.1.101
+-> I have got replies ensuring proper transmission without losses 
+
+Difficulties:
+-> when i tried to connect the DNS , ping 8.8.8.8 it failed ensuring that i have issues with the DNS.
