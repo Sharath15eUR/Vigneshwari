@@ -1,1 +1,29 @@
+DHCP:
+-> ipconfig /release and ifconfig /renew is used to release the existng ip and add the new ip dynamically using DHCP.
 
+DORA PROCESSES:
+-> It consists of 4 processes:
+    Discover
+    Offer
+    Request
+    Acknowledgement
+-> Discover (D) – The client sends a broadcast request (DHCP Discover) asking for an available IP address.
+->Offer (O) – The DHCP server responds with an available IP address and other network details (DHCP Offer).
+->Request (R) – The client sends a DHCP Request, confirming it wants the offered IP.
+->Acknowledge (A) – The DHCP server sends a DHCP Acknowledge, confirming the lease and assigning the IP.
+
+
+Observation:
+-> The Wireless LAN adapter Wi-Fi shows a change:
+IPv4 Address:
+Before: No IPv4 address initially listed (or using a previous IP)
+After: Changed to 192.168.149.155
+
+->Default Gateway:
+Before: Not listed
+After: Set to 192.168.149.163
+
+->The Wi-Fi interface (Wireless LAN adapter Wi-Fi) was the interface affected by the ipconfig /release and ipconfig /renew commands.
+
+->Capturing using wireshark:
+I used DHCP filter to capture the packets associted with DHCP.
