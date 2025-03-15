@@ -1,1 +1,15 @@
+This is how we can divide the 192.168.1.0/24 network into 4 subnets and assign IPs in Cisco Packet Tracer:
+->Calculate the New Subnet Mask
+->Given Network: 192.168.1.0/24 (Subnet Mask: 255.255.255.0)
+->Dividing into 4 subnets → Need 2 additional bits for subnetting (/24 → /26).
+->New Subnet Mask: 255.255.255.192
+->Each Subnet Contains: 2^(32-26) = 64 total addresses (62 usable IPs per subnet).
+VALID IP ADDRESSES FOR EACH SUBNET :
+
+Ranges:
+Subnet	  Network Address	     Usable IP Range	         Broadcast Address
+Subnet 1	192.168.1.0/26	  192.168.1.1 – 192.168.1.62	   192.168.1.63
+Subnet 2	192.168.1.64/26 	192.168.1.65 – 192.168.1.126	 192.168.1.127
+Subnet 3	192.168.1.128/26	192.168.1.129 – 192.168.1.190	 192.168.1.191
+Subnet 4	192.168.1.192/26	192.168.1.193 – 192.168.1.254	 192.168.1.255
 
