@@ -1,1 +1,14 @@
-
+Traceroute :
+-> tracert is the windows version which is a network diagnostic tool used to trace the path packets take from your device to a destination (e.g., google.com). They help identify routing issues and checks whether the packet  has reahed the destination address.
+->It provides a detailed map of the path taken by the packets from the source device to the destination, showing each intermediate router or "hop" along the way.
+-> There are various versions of tracert which are as follows:
+tracert www.google.com :  	Basic syntax to run Tracert to a specified destination (IP address or domain name).	
+tracert -d www.google.com :	Disables the domain name resolution; shows only IP addresses instead of hostnames.	
+tracert -h  20 www.google.com : 	Sets the maximum number of hops to trace before terminating.
+tracert -w 1000 www.google.com: Specifies the timeout in milliseconds to wait for each reply. Default is 4000 ms.	
+tracert -4 www.google.com: 	Forces Tracert to use IPv4 for the trace.	
+tracert -6 www.google.com: 	Forces Tracert to use IPv6 for the trace.	
+tracert -l 1500 www.google.com:	Specifies the number of bytes in the ICMP packet sent. Default is 32 bytes.	
+tracert -p 80 www.google.com 	: Sends the trace to the specified port number.
+tracert -R www.google.com : 	This option routes each hop in reverse, from destination back to the source.
+tracert -T www.google.com :	Specifies the use of a TCP-based probe instead of the default ICMP packets.
