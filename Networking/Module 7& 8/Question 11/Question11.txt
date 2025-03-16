@@ -1,1 +1,14 @@
+-> I have set up a Standard ACL to permit traffic from a specific IP range while blocking all other traffic using the same n/w setup usd in Question 10.
+Steps:
+-> IP Range to Allow: 192.168.10.0/24 (all devices in VLAN 10)
+-> Deny All Other Traffic
+->  Apply ACL to the Interface for Incoming Traffic
+-> to achieve this i have configured the router with :
+             Router(config)# access-list 10 permit 192.168.10.0 0.0.0.255(Allows all devices in VLAN 10 (192.168.10.x).)
+             Router(config)# access-list 10 deny any (denies others)
+->I applied ACL on the router.
+
+Observations:
+->i used ping command to check the connectivity on PC0 and PC1. and got successful replies.
+->But i tried to use telnet and ssh on the server it failed because we have blocked VLAN20 devices from accessing the VLAN10's service.
 
