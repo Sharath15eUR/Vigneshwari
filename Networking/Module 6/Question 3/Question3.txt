@@ -1,1 +1,42 @@
+-> Subnet dividing:
+Given network: 10.0.0.0/24
+Subnet mask: 255.255.255.0
+Binary representation : 11111111.11111111.11111111.00000000
+Here, the first 24 bits are for the network and the last 4 bits are assigned for the hosts.
 
+In order to divide 4 equal subnets ,We need 2 additional bits which can be taken from the host position.thus it is now converted into 10.0.0.0/26
+we require 2^2 = 4 subnets.
+Thus ,the new subnet is :
+      Binary: 11111111.11111111.11111111.11000000
+      Decimal: 255.255.255.192
+For each subnet:
+Subnet size: 2^(32 - 26) = 2^6 = 64 IPs
+Usable hosts per subnet: 64 - 2 = 62 hosts.
+
+Summary:
+-> Subnet 1	
+N/w address:10.0.0.0/26	
+First host address:10.0.0.1	
+Last host address:10.0.0.62	
+Broadcast address:10.0.0.63
+-> Subnet 2
+N/w address:10.0.0.64/26	
+First host address:10.0.0.65	
+Last host address:10.0.0.126	
+Broadcast address:10.0.0.127
+-> Subnet 3
+N/w address:10.0.0.128/26
+First host address:10.0.0.129	
+Last host address:10.0.0.190	
+Broadcast address:10.0.0.191
+-> Subnet 4	
+N/w address:10.0.0.192/26	
+First host address:10.0.0.193	
+Last host address:10.0.0.254	
+Broadcast address:10.0.0.255
+
+Steps:
+->First,using cisco packet tracer i configured a network using 2 routers,4 switches(1 switch /subnet),8 PC's.
+->I configured the routers and using ip route, routed Router1 to subnet 3 and 4 and Router2 to subnet 1 and 2.
+->I used ping command on PC0(subnet 1) to PC4(suubnet 3) and got successful replies.
+->II found the packet's transfer path using tracert command.
