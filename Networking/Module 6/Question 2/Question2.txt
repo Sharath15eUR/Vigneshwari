@@ -1,1 +1,52 @@
+Routing:
+->Routing is a process that shows how data packets are forwarded between different networks and devices.Routers are devices that perform routing.
 
+->Here I used Static routing since it is easy to perform in simple procedures .In static routing, I explicitly defined the path that data packets should take from one network to another. 
+
+Steps:
+-> I used cisco packet tracer to setup a simple 2 LAN based systems comprising a router , 2 PC and a switch for each system.Both the routers arev connected using a copper crossover cable.
+-> First I configured the router 5 and router 6 using the commands:
+-> Router 5:
+            enable
+            configure terminal
+            interface GigabitEthernet0/0
+            ip address 192.168.1.1 255.255.255.0
+            no shutdown
+            exit
+
+-> Router 6:
+            enable
+            configure terminal
+            interface GigabitEthernet0/0
+            ip address 192.168.2.1 255.255.255.0
+            no shutdown
+            exit
+-> I used ip route command in Router5 to configure Static Route to 192.168.2.0/24 via Router6:
+      ip route 192.168.2.0 255.255.255.0 10.0.0.2.
+-> I used ip route command in Router6 to configure Static Route to 192.168.1.0/24 via Router6:
+      ip route 192.168.1.0 255.255.255.0 10.0.0.1
+-> I configured the PC's of the two individual systems.
+-> PC0
+IP Address: 192.168.1.10
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.1.1
+-> PC1
+IP Address: 192.168.1.11
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.1.1
+-> PC2
+IP Address: 192.168.2.10
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.2.1
+-> PC3
+IP Address: 192.168.2.11
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.2.1
+->I used ping command to check the connection between the PC's of system 1 and system 2.Here, I used ping command on PC0(System 1)  to PC2 on system 2 and got successful replies.
+->I used ip route show command to show the routing tables of Router5 and Router6
+->I used tracert command from PC0 to check the path to PC2.
+->tracert command can show till 30 hops .I traced the route for my connection in 3 hops itself.
+     192.168.1.1 (Router5) → The default gateway for PC0 
+     10.0.0.2 (Router6) → Router5 forwards the packet to Router6 via the link between routers.
+     192.168.2.10 (PC2) → Router6 sees that the destination is on its directly connected network (192.168.2.0/24) and forwards it to PC2.
+-> Hence, I found the successful connection and proper packet forwarding.
