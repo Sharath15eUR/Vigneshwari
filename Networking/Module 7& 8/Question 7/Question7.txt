@@ -1,1 +1,7 @@
-
+Steps:
+->A N/W is connnected using a switch , 2 PC's and a IP phone for the VoIP.
+->two VLAN's are made one with vlan 10 and vlan 20.
+->The switch is then configured and is allowed to access the connected interfaces.
+->ip's are assigned to the PC0 and PC1.
+->the ip phone is turned on using the module adapter in physical tab.
+->to check the connectivity the ping command is used in PC0 to PC1.
