@@ -1,1 +1,13 @@
-
+Inter VLAN routing:
+->Inter-VLAN routing allows communication between different VLANs using a router.
+->Since Layer 2 switches cannot route traffic between VLANs, we use a Router-on-a-Stick configuration.
+N/W setup:
+->2 PC's
+->A switch(2960)
+->A router(2911)
+Steps:
+->I have configured a n/w using the above given components.
+->First I have configured the switches and named VLAN10 and VLAN20.
+->I conncted a trunk port with the router.
+->Next, I configured the router.
+->I verified their connectivity using the  ping command ( VLAN10(PC0)-> VLAN20(PC1)) and got successful replies.
