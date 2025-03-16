@@ -1,1 +1,27 @@
+ACL:
+->Access Control Lists (ACLs) are used to filter network traffic based on IP addresses, protocols, and port numbers. There are 2 ways to implement Standard ACLs (IP-based) or Extended ACLs (IP + Port-based).
+-> Here, Iam using an Extended ACL to restrict traffic based on source and destination ports and test it with both legitimate and unauthorized traffic.
+
+Steps:
+->Set up a network using a server,router,switch and 2 PC's.
+->Configure switches and assin VLAN's.
+->Configure router for inter VLAN routing.
+->To implement ACL:
+Now, apply an ACL to restrict PC2 from accessing the Web Server on Port 80.
+          Router(config)# access-list 100 permit tcp host 192.168.10.10 any eq 80
+          Router(config)# access-list 100 deny tcp host 192.168.10.20 any eq 80
+          Router(config)# access-list 100 permit ip any any
+here,
+PC0 (192.168.10.10) -> Allowed HTTP (Port 80) Traffic to Any Destination
+PC1 (192.168.10.20) -> Denied HTTP (Port 80) Traffic to Any Destination
+All Other Traffic is Allowed
+->Assign the ip's to the PC's.
+
+Testing:
+->On PC0, I tried accessing the Web Server on Port 80, the result is successful.
+->On PC1, I tried accessing the Web Server on Port 80, host is not reachable indicating that ACL has blocked the PC1 from accessing the port 80.
+->On PC2, test I have checked if the ping is still working,and it provided successful replies.
+->I checked the ACL's using :
+             show access-lists
+
 
