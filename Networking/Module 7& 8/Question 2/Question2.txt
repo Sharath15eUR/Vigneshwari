@@ -1,1 +1,22 @@
+DNS protocol:
+-> The Domain Name System (DNS) protocol is a network protocol that translates domain names into IP addresses. 
+-> It's a key part of the internet's infrastructure, and is used by web browsers to find websites. 
+->To capture the DNS protocol based products , I have searched www.google.com which provided th ip of the site.
+->It provides a query Request:  "Standard query A www.google.com"
+-> as a Response it Shows the IP address for www.google.com which is 142.250.193.138.
+
+TCP protocol:
+-> Transmission Control Protocol is a connection-oriented protocol for communications that helps in the exchange of messages between different devices over a network.
+->TCP establishes a reliable connection between sender and receiver using the three-way handshake (SYN, SYN-ACK, ACK) and it uses a four-step handshake (FIN, ACK, FIN, ACK) to close connections properly.
+->To capture tcp protocol i used ping and tracert commands in the cmd.
+->I observed the source and destination ports , for example  source port :58345 and destination port : 443 and the flag being used is SYN flag.
+->I have also applied a filter to to see TCP handshakes only:
+                tcp.flags.syn==1 && tcp.flags.ack==0 
+
+UDP protocol:
+->User datagram protocol is a connectionless and light weighted protocol and thus it is unreliable.
+->Normally used for real-time applications which can not tolerate uneven delays between sections of a received message like VoIp(Voice over internet protocol) , video conferencing etc.
+-> To genertae udp traffic I used skype application that genertaed udp traffic.
+
+
 
