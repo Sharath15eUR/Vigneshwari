@@ -1,1 +1,47 @@
+ARP Protcol:
+-> Address Resolution Protocol (ARP) is a network protocol used to map IP addresses  to MAC addresses within a network.
+-> When a device needs to communicate with another device on the same network, it must know the recipient's MAC address. If the MAC address is unknown, ARP is used to find it.
+
+Steps :
+-> I opened Wireshark and chose the interface ( I chose Wifi as my interface).
+-> In the command prompt , I used ping command of my router's IP .This forces the device to resolve the MAC address of the router.
+-> Then in the filter coloumn I used arp to filter out only the arp protocol .
+-> I used arp -a command in the cmd to displaty the arp table
+
+How arp works: 
+arp works by arp request and arp reply processes,below is the description of the two processes.
+-> ARP Request (Broadcast)
+* The router sends an ARP request packet to all devices in the local network.
+* The request asks, "Who has IP 192.168.1.4? Tell 192.168.1.1."
+* This is a broadcast message (sent to FF:FF:FF:FF:FF:FF).
+-> ARP Reply (Unicast)
+* The device with the requested IP address responds with its MAC address.
+* The reply is a unicast message sent directly to the requesting device.
+
+Observations :
+ARP request:
+Opcode: request (1)
+Source MAC : PhotonBroadb_e3:7e:a6 (00:18:93:e3:7e:a6)
+Source ip address : 192.168.1.1
+Destination MAC address: Broadcast (ff:ff:ff:ff:ff:ff)
+Destination IP address: 192.168.1.4
+Description: Who has 192.168.1.4? Tell 192.168.1.1
+
+ARP reply:
+Opcode: reply (2)
+Source MAC address: Intel_d0:af:84 (b0:60:88:d0:af:84)
+Source ip address : 192.168.1.4
+Destination MAC address	: PhotonBroadb_e3:7e:a6 (00:18:93:e3:7e:a6)
+Destination ip address :192.168.1.1
+Description :192.168.1.4 is at b0:60:88:d0:af:84
+
+Importance of arp in data forwarding:
+-> When a device wants to send data to another device on the same network, it needs the MAC address of the recipient, not just the IP address.ARP facilitates this mapping by broadcasting a request to find the MAC address associated with a specific IP address.
+->ARP resolves IP to MAC address.
+->When a device wants to send packets within a LAN, ARP finds the correct MAC address for the destination,thus enabling LAN Communication.
+->It stores the MAC address in arp cache to reduce the network traffic.But arp caching can lead to malware attccks like arp spoofing.
+->Without ARP, devices couldn’t communicate in Ethernet-based LANs.
+->ARP dynamically updates MAC addresses using ARP requests and replies.
+
+
 
