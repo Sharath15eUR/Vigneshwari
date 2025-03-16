@@ -1,1 +1,10 @@
+Test-connection :
+This command checks if a website is reachable.
+nslookup:
+This retrieves the IP address of the domain,i.e., finds the ip address of the website.
 
+Steps:
+-> I have executed the commands in the windows powershell.
+->For verification purpose, I tried www.google.com
+      Test-connection : I have verified this using the tracert command , if we can trace the destination.
+      nslookup: I have manually typed the ip address in the chrome tab and it opens to the google page.
