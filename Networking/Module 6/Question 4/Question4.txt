@@ -1,1 +1,25 @@
+Q4. You are given three IP addresses: 192.168.10.5, 172.20.15.1, and 8.8.8.8. Identify the class of each IP address. Determine if it is private or public.Explain how NAT would handle a private IP when accessing the internet.
+
+->192.168.10.5	
+Class: Class C	
+Public/Private: Private	
+Description: Falls within 192.168.0.0 - 192.168.255.255 
+->172.20.15.1	
+Class:Class B	
+Public/Private: Private	
+Description: Falls within 172.16.0.0 - 172.31.255.255 
+->8.8.8.8	
+Class: Class A	
+Public/Private: Public	
+Description : Does NOT fall in any private range
+
+How NAT handles private ip?
+->Private IP addresses are designated for local networks and cannot directly access the internet.
+->Network Address Translation (NAT) enables devices with private IPs to connect to the internet by converting them into a public IP address.
+Steps:
+-> A device with a private IP attempts to access an external website, such as 8.8.8.8 
+-> The router, configured with NAT, swaps the private IP with its own public IP.
+-> The request is then sent over the internet to the destination IP.
+-> When the response comes back, it is directed to the router's public IP.
+-> NAT translates the public IP back to the original private IP and forwards the response to the correct device.
 
