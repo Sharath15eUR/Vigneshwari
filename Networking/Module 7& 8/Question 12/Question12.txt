@@ -1,1 +1,10 @@
-
+Steps:
+->PC, Router, Server Setup: Connected PC, Router, and Server in the network with appropriate interfaces.
+->IP Addresses Assigned: Configured IP addresses and subnet masks for PC, Server, and Router interfaces.
+->Server HTTP, FTP Enabled: Enabled HTTP (Port 80) and FTP (Port 21) services on the Server (192.168.20.100).
+->Router Interface IPs Set: Configured subinterfaces on the Router for VLAN 10 and VLAN 20 with respective IPs.
+->ACL 101 Created: Defined an extended access control list (ACL 101) to block HTTP and FTP traffic.
+->ACL Denies PC to Server (HTTP, FTP): Applied rules to restrict PC (192.168.10.10) from accessing HTTP & FTP services on the Server.
+->ACL Permits All Other Traffic: Allowed all other types of network traffic to pass through unrestricted.
+->ACL Applied to Router Interface: Implemented the ACL on the router's outbound interface for VLAN 10.
+->HTTP, FTP Access Failed: Verified that HTTP and FTP connections from PC1 to the Server were successfully blocked.
