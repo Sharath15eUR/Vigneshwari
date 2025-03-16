@@ -1,1 +1,71 @@
+Troubleshooting Inter-VLAN Communication Issue : 
 
+If devices in VLAN 10 cannot communicate with devices in VLAN 20, the problem is likely due to the absence of inter-VLAN routing, incorrect VLAN configurations, or trunking misconfigurations. Follow these steps to diagnose and resolve the issue:  
+
+1. Check VLAN Configuration 
+   -> Confirm that VLANs 10 and 20 are properly created and that ports are assigned to the correct VLANs.  
+
+2. Verify Port Modes 
+   -> Ensure that access ports are correctly set for their respective VLANs:  
+    
+     Switch(config)# interface FastEthernet 0/1  
+     Switch(config-if)# switchport mode access  
+     Switch(config-if)# switchport access vlan 10  
+     Switch(config-if)# exit  
+      
+     Switch(config)# interface FastEthernet 0/2  
+     Switch(config-if)# switchport mode access  
+     Switch(config-if)# switchport access vlan 20  
+     
+   -> If ports are assigned incorrectly, reconfigure them accordingly.  
+
+3. Enable Inter-VLAN Routing
+   -> Layer 2 switches cannot perform inter-VLAN routing, so a Layer 3 device (Router-on-a-Stick or Layer 3 switch) is needed.  
+
+   For Router-on-a-Stick (Router with Subinterfaces): 
+   
+   Router(config)# interface GigabitEthernet 0/0.10  
+   Router(config-subif)# encapsulation dot1Q 10  
+   Router(config-subif)# ip address 192.168.10.1 255.255.255.0  
+   Router(config-subif)# exit  
+     
+   Router(config)# interface GigabitEthernet 0/0.20  
+   Router(config-subif)# encapsulation dot1Q 20  
+   Router(config-subif)# ip address 192.168.20.1 255.255.255.0  
+   Router(config-subif)# exit  
+   
+   -> Ensure that trunking is enabled between the switch and router.  
+
+  For a Layer 3 Switch 
+   
+   Switch(config)# interface Vlan10  
+   Switch(config-if)# ip address 192.168.10.1 255.255.255.0  
+   Switch(config-if)# no shutdown  
+     
+   Switch(config)# interface Vlan20  
+   Switch(config-if)# ip address 192.168.20.1 255.255.255.0  
+   Switch(config-if)# no shutdown  
+    
+
+4. Verify Trunking Configuration
+   -> Ensure the uplink between the switch and router or Layer 3 switch is set as a trunk port:  
+       
+     Switch(config)# interface GigabitEthernet 0/1  
+     Switch(config-if)# switchport mode trunk  
+     Switch(config-if)# switchport trunk allowed vlan 10,20  
+     
+   -> If VLANs are not permitted on the trunk, add them using the switchport trunk allowed vlan command.  
+
+5. Check Default Gateway Settings  
+   -> Each device should be configured with the correct default gateway corresponding to its VLAN:  
+     - VLAN 10 Devices: Default gateway: 192.168.10.1  
+     - VLAN 20 Devices: Default gateway: 192.168.20.1  
+
+6. Test Network Connectivity 
+   -> Try pinging a device in the other VLAN:  
+    
+     PC1> ping 192.168.20.100  
+       
+   -> If the ping fails, investigate firewall settings, access control lists (ACLs), or missing routing configurations on the router.  
+
+->By systematically following these steps, inter-VLAN communication should be restored.
