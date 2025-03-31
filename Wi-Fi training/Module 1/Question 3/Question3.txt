@@ -1,1 +1,21 @@
+IEEE 802.11 defines two types of services:
+       1. Basic Service Set (BSS)
+       2. Extended Service set(ESS)
 
+BSS:
+->It is the building block of wireless LAN.
+->BSS is basically a network topology that allows all wireless devices to communicate with each other through a common medium i.e., AP (Access point)
+->here, one AP connects all the stations. Thus it is not mobile.
+->In BSS, stations or devices do not communicate directly with each other . AP is required that acts as a medium.
+->It provides short range wireless communication and the area it covers is known as BSA(Basic service area).
+-> Each BSS is uniquely identified using an ID called BSSID (Basic service set identifier). This BSSID is the MAC address of AP associated with BSS.
+-> It is mainly used in home or small offices.
+
+ESS:
+->It conists ofmore than one BSS that are interconnected with each other.
+->ALL APs in ESS are connected to each other by a common DS (Distribution System). With the help of DS, more than one AP can get connected to the same LAN. 
+->Here ,all APs work together to create a long range wireless network like an entire building coverage.
+->Area that is being covered by ESS is known as ESA (Extended Service Area).
+->It supports mobility as more than one AP is present.Whenever user moves from one area to another, it will jump from one AP to another.This is known as roaming.
+->ESS provide better strength and boost signal all over wireless network.
+->It is mainly used for large areas like an entire building etc.
