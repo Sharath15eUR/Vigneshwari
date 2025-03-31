@@ -1,1 +1,15 @@
+-> Commonly used devices connected to the Wi-Fi in our residence includes Smart phones , smart TV's , Laptops , PC's, gaming console etc.
+-> The devices that i use includes:
+          a. mobile phone : Supports 2.4 GHz & 5 GHz bandwidth (Wifi 5) - OnePlus nord ce2 lite , samsung galaxy m2
+          b. Laptops : Supports 2.4 GHz & 5 GHz bandwidth (Wifi 5) - Lenovo ideapad i3 gen
 
+-> I have attached the wifi properties of my laptop using the command 
+            netsh wlan show drivers
+
+-> Following are the observations made:
+* Name:Intel Wireless-AC 9560
+* Supports: Wi-Fi 1, 2, 3, 4, and 5 (Up to 802.11ac)
+* Max Speed: 1.73 Gbps (on 5 GHz)
+* Security: WPA2, WPA3, 802.11w (strong encryption)
+* No Wi-Fi 6 (802.11ax) or Wi-Fi 6E (6 GHz support)
+* Best Performance: Use a Wi-Fi 5 (802.11ac) or Wi-Fi 6 router on 5 GHz
