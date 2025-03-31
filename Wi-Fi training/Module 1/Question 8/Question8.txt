@@ -1,1 +1,13 @@
+IEEE:
+-> Institute of Electrical and electronics Engeineers.
+-> Creates and maintains the 802.11 wireless networking standards
+-> Develops technical standards for various technologies. e.g., 802.11 Wi-Fi standards.
+-> Covers a wide range of engineering and technology fields.
+-> Its members includes Engineers, researchers, and professionals from various industries.
 
+WFA:
+-> Wi-Fi Alliance
+-> Tests and certifies Wi-Fi devices for compatibility and reliability.
+-> Ensures interoperability, security, and certification of Wi-Fi products.
+-> Focuses specifically on Wi-Fi technology and branding.
+-> Its members includes Wi-Fi equipment manufacturers, service providers, and industry stakeholders.
