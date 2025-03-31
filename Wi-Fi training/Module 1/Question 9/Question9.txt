@@ -1,1 +1,18 @@
+A Wi-Fi backhaul refers to the method used to connect an access point (AP) or router to the main internet source. There are different types based on the medium used:
+                    1.Wired backhaul (Most Reliable & High-Speed)
+                    2. Wireless backhaul (Flexible but May Have Higher Latency)
+                    3. Hybrid backhaul
+Examples of backhauls are :
+-> Fibre optics
+-> Ethernet (Copper cables)
+-> Satellite backhaul
+-> Cellular (4G/5G) Backhaul
+-> PLC (Power line communication ) backhaul
 
+Our college uses fibre optics for communication, some of the key propoerties includes:
+-> Technology Used: Optical fiber cables (light transmission)
+-> Speed: Can range from 100 Mbps to 1 Gbps (Not sure about the range )
+-> Latency: Very low 
+->  Reliability: Extremely high
+-> Distance Coverage: Can transmit data over the entire campus
+   
