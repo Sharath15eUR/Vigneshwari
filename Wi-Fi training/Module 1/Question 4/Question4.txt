@@ -1,1 +1,10 @@
+A Wi-Fi Access Point (AP)  allows wireless devices to connect to a wired network using Wi-Fi.The functions of Wifi AP are:
+-> Provides a wireless signal for devices to connect to the network.
+-> Acts as a bridge between a wired Ethernet network and wireless devices.
+-> Sends and receives radio signals between connected devices and the network.
+-> Extends the coverage area of a Wi-Fi network, reducing dead zones.
+-> Supports multiple simultaneous connections from various wireless devices.
+-> Controls and optimizes bandwidth usage among connected devices.
+-> Supports roaming
+
 
