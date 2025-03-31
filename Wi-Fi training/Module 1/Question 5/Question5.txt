@@ -1,1 +1,13 @@
+Bridge:
+-> Operates in data link layer.
+-> Connects two separate networks.
+-> Point to point operation
+-> No signal loss
+-> Use cases : Large buildings, different network segments
 
+Repeater:
+-> Operates in physical layer
+-> Extends existing Wifi signal
+-> Broadcasting operation
+-> Can reduce speed by 50% per hop
+-> Use cases : Home Wi-Fi range extension
