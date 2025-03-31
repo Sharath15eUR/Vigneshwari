@@ -1,1 +1,19 @@
+802.11a and 802.11b are both part of the IEEE 802.11 wireless networking standards.The major difference between them are:
 
+802.11a:
+-> Introduced year : 1999
+-> Speed : 5GHz
+-> Maximum speed : 54 Mbps
+-> Range : Suitable for shorter distances 
+-> Cost : expensive
+-> Interference : Less interference as only few devices use 5GHz.
+-> Use cases : used in enterprisee networks ,airports etc.
+
+802.11b:
+-> Introduced year : 1999
+-> Speed : 2.4GHz
+-> Maximum speed : 11 Mbps
+-> Range : Suitable for longer distances 
+-> Cost : cheaper
+-> Interference : More interference.
+-> Use cases:  Home and public Wi-Fi networks
