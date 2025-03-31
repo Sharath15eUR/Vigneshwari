@@ -1,1 +1,22 @@
+Depending on how devices and access points communicate , there are varous toplogies, which are as follows :
 
+-> Infrastructure mode (Star topology)
+Devices connect to a central AP , which is wired to the main network.
+It includes BSS, ESS and DS.
+Use cases:  Home and office Wi-Fi networks , Public hotspots (eg., cafe etc)
+
+->Ad-Hoc Mode (Mesh-Like)
+Devices communicate directly with each other without an access point and thus called peer-to-peer connection.
+Use cases: File sharing b/w laptops (temporary sharing).
+
+-> Mesh topology 
+Multiple Wi-Fi nodes connect to each other dynamically, creating a self-healing and extended coverage network.
+Use cases: Smart cities and IoT networks 
+
+-> Wireless Distribution System (WDS)
+ APs are wirelessly linked to extend network coverage without requiring Ethernet cables.
+Use cases: Outdoor campus networks , connecting separate buildings.
+
+-> Point-to-Point (PtP) and Point-to-Multipoint (PtMP)
+Uses directional antennas to connect one location to another (PtP) or one location to many (PtMP).
+Use cases: Long-distance wireless backhaul .
