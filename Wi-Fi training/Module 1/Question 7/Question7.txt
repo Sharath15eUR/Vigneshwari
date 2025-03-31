@@ -1,1 +1,30 @@
+-> Since , I donot own a wifi router , I have changed the hotspot setting of my mobile to 2.4GHz bandwidth and connected it to the laptop.
+-> I used the command 
+  netsh wlan show interfaces
+on my laptop to check for the properties.
+-> I have comapred the results obtained by connecting with 2.4GHz and 5GHz :
+a. Wi-Fi Standard	: 802.11n (Wi-Fi 4)	- 2.4GHz
+                  802.11ac (Wi-Fi 5) -5 GHz     
+  result : 5 GHz supports a newer, faster standard.
 
+b. Channel  : 	1 - 2.4GHz	
+                36 - 5GHz 
+result: 5 GHz operates on higher, less crowded channels.
+
+c. Band	: 2.4 GHz has better range, but 5 GHz has higher speed
+
+d. Receive Speed : 	72.2 Mbps - 2.4GHz
+                  433.3 Mbps - 5GHz 	
+result : 5 GHz is 6x faster here.
+
+e. Transmit Speed : 	72.2 Mbps	- 2.4 GHz
+                      26 Mbps - 5GHz	
+result : Unstable transmit rate on 5 GHz 
+
+f.Signal Strength	: 92% - 2.4GHz
+                    87%	- 5GHz 
+result : 2.4 GHz has a slightly stronger signal
+
+g. Interference : 	More (crowded band) - 2.4 GHz
+                    Less (cleaner band) - 5GHz
+result: 2.4 GHz faces interference from Bluetooth, microwaves, etc.
