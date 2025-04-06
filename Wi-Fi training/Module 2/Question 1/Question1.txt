@@ -1,1 +1,22 @@
+Split MAC:
+-> SplitMAC architecture is a tuype od architecture in  wireless networks, particularly in enterprise Wi-Fi systems, where the Media Access Control (MAC) layer functionality is split between two devices,which are:
+a. Access Point (AP) – the hardware device that connects wireless clients to the network.The AP handles real-time MAC functions.
+b.Wireless LAN Controller (WLC) – a centralized control unit that manages multiple APs.The WLC takes care of higher-level MAC functions
+
+-> Responsiblities of AP:
+a.Frame acknowledgment
+b.Retransmissions
+c.Encryption/decryption
+d.Packet buffering
+
+-> Responsiblities of WLC:
+a.Authentication
+b.Association and roaming decisions
+c.Load balancing
+d.RF management and channel selection
+
+->SplitMAC improves AP performance by:
+a.Configuration, updates, and policy enforcement are done at the controller level, reducing overhead on the AP and simplifying network management.
+b.Improved Roaming as the WLC manages seamless handoffs between APs and therfore reducing packet loss and latency.
+c.SplitMAC allows better scalability in large deployments since APs remain lightweight and the controller can manage hundreds of APs efficiently.
 
