@@ -1,1 +1,31 @@
+CAPWAP:
+-> CAPWAP stands for Control And Provisioning of Wireless Access Points.
+-> It is a standardized protocol defined by the IETF (RFC 5415) that enables centralized control of wireless networks.
+->It facilitates communication between Lightweight Access Points (LWAPs) and a Wireless LAN Controller (WLC).
+->CAPWAP encapsulates both control and data messages between APs and controllers, allowing for centralized management and configuration of APs.
 
+Features:
+->Supports SplitMAC architecture.
+->Separates Control Plane and Data Plane.
+->Works over IP networks using UDP ports 5246 (Control) and 5247 (Data).
+
+Flow Between AP and Controller:
+1. Discovery Phase: 
+The AP powers up and looks for a WLC.AP sends a Discovery Request to the controller.
+2. Join Phase:
+The WLC responds with a Discovery Response.AP selects a WLC and sends a Join Request.WLC replies with a Join Response, and the CAPWAP tunnel is established.
+3. Image Download :
+If the AP’s software version is not compatible, the WLC pushes the correct image to the AP.
+4. Configuration
+Once joined, the WLC pushes configuration settings (SSIDs, security policies, etc.) to the AP.
+5. Operational Phase
+The AP is now operational.CAPWAP Data Tunnel carries user data from AP to WLC.
+
+Representation:
+[AP] ---> Discovery Request ---> [WLC]
+[WLC] ---> Discovery Response ---> [AP]
+[AP] ---> Join Request ---> [WLC]
+[WLC] ---> Join Response ---> [AP]
+[WLC] ---> (optional) Image Download ---> [AP]
+[WLC] ---> Configuration Push ---> [AP]
+[AP] <--> Control & Data Tunnels <--> [WLC]
