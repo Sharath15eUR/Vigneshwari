@@ -1,0 +1,13 @@
+Monitor mode:
+-> Listens to all wireless traffic on a channel.
+-> Can be enabled directly on a wireless interface.
+-> AP does not serve clients, only listens.
+-> Commonly used with tools like Wireshark.
+Use case: You're performing a wireless site survey .You set your wireless adapter or AP to Monitor Mode to capture all Wi-Fi traffic in the area, including probe requests and data from all devices—whether or not they’re connected to your network.As moniotr mode helps in complete network visualizaton.
+
+Sniffer mode:
+-> Captures wireless traffic for analysis.
+-> Requires connection to a Wireless LAN Controller.
+-> AP Acts like a client capturing packets.
+-> Often used with controllers (e.g. Cisco WLC).
+Use case: You are troubleshooting performance issues in a wireless network managed by a Cisco WLC. You configure an AP in Sniffer Mode to capture real-time packets and forward them to a protocol analyzer (like Wireshark) for deep analysis.Because the AP is integrated with the controller, it can easily stream live traffic for remote troubleshooting.
