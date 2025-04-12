@@ -1,0 +1,6 @@
+-> New Client Connections Fail.
+-> Existing Clients Stay Connected temporarily , since the AP relies on the WLC for client session management and switching, this is not guaranteed to last long.
+-> Roaming between APs breaks because coordination as it is handled by the WLC.
+-> Monitoring, logging, and troubleshooting data from the AP also stop reporting to the central system.
+-> AP May Reboot or Restart Discovery when it couldn't find out the WLC in a set time.
+-> Also the entral services like DHCp etc. fail if the issues persists.
