@@ -1,0 +1,22 @@
+Frequency band:
+-> These determines specific range of electromagnetic frequencies used in wireless communication.
+-> These allow devieces to connect to the internet without the physical cables , ensuring seamless rmobility.
+-> Wifi frequency bands re very crucila in determining how wireless n/w operates , its connection , speed and range.
+-> In wifi we have primarily 2 frequency bands which are 
+       a. 2.4 GHz
+       b. 5 GHz
+
+
+2.4GHz:
+-> Longere range , better penetration througthrough the walls.
+-> Slower speeds - upto 600 MBps.
+-> Higher vulnerable to interfernce.
+-> has only fewer non -overlapping channels.
+-> use cases: IoT devices , browsing.
+
+5GHz:
+->Shorter range, less penetration.
+-> Higher speeds - upto 1300 Mbps or more .
+-> Less prone to interference.
+-> has large number of non- overlapping channels.
+-> use cases : Streaming high definition videos , online gaming etc.
