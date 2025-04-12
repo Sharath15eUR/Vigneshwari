@@ -1,1 +1,17 @@
+Lightweight Access Points (APs) and Cloud-based Access Points are both types of wireless APs used in enterprise networks.The differences between them are: 
 
+LWAP:
+-> Controlled by a centralized Wireless LAN Controller.
+-> Security, configuration, firmware updates resides in the controller. The AP just forwards data and control messages.
+-> Requires on-premise hardware controller for deployment.
+-> Highly scalable, but complex.
+-> Internet cnnectivity not required for management.
+-> Typically used in large enterprise environments with many APs and a need for centralized control.
+
+Cloud AP:
+-> Managed through a cloud controller.
+-> APs connect to and get configurations from the cloud. No on-premise controller needed.
+-> No need for physical controllers.
+-> Very scalable and simple.
+-> Required internet for full functionality.
+-> Ideal for distributed networks or organizations with multiple remote locations.
