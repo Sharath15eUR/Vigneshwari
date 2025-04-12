@@ -1,1 +1,39 @@
+PPDU (Physical Layer Protocol Data Unit):
 
+-> The PPDU is the complete frame sent over the air by the PHY layer in a Wi-Fi transmission.
+-> It includes everything needed for a receiving device to successfully synchronize, decode, and interpret the signal.
+
+General PPDU Structure:  
+-> A typical PPDU consists of:
+a.Preamble – Used for synchronization and to help the receiver estimate the channel.
+b.PHY Header – Contains control information that helps in decoding.
+c.PSDU (Payload) – The actual data coming from the MAC layer.
+
+Types of PPDUs Across Wi-Fi Standards:
+-> Legacy PPDU (802.11a/b/g)
+   a. Used in early Wi-Fi versions.
+   b.Simple structure: preamble, header, and data.
+   c.Designed for single-user communication only.
+   d.Lower efficiency and no support for modern features like MIMO or wider channels.
+
+->HT PPDU (High Throughput – 802.11n / Wi-Fi 4)
+    a.Introduced MIMO, enabling multiple parallel data streams.
+    b.Supports 20 MHz and 40 MHz channels.
+    c.Includes HT-SIG fields to describe MIMO configuration.
+    d.Can use shorter guard intervals (400 ns) to improve throughput.
+
+-> VHT PPDU (Very High Throughput – 802.11ac / Wi-Fi 5)
+    a. Adds support for MU-MIMO and channel widths up to 160 MHz.
+    b. Includes VHT-SIG-A and VHT-SIG-B fields with more detailed modulation and user-specific data.
+    c. Uses 256-QAM for faster data rates.
+    d.  Much more efficient than HT, especially for multiple users.
+
+-> HE PPDU (High Efficiency – 802.11ax / Wi-Fi 6/6E)
+    a. Designed to handle dense environments with many devices.
+    b.Supports advanced features like OFDMA, BSS coloring, Target Wake Time (TWT), and UL/DL MU-MIMO.
+    c.Comes in several formats:
+           HE SU PPDU – for single-user transmission.
+           HE MU PPDU – for multi-user scenarios.
+           HE TB PPDU – for random uplink access.
+           HE ER PPDU – for long-distance coverage (extended range).
+   d.Contains HE-SIG-A and HE-SIG-B to convey complex configuration info.
