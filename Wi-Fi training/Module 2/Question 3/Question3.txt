@@ -1,1 +1,6 @@
-
+-> CAPWAP sits at OSI Layer 3 and 4.
+-> CAPWAP uses IP addressing to allow communication between APs and WLCs across subnets or different networks.Thus, Layer 3 operation ensures that CAPWAP traffic can be routed over the internet, VPNs, or private WANs.
+-> In layer 4 because it provides UDP transport + DTLS encryption for security.
+-> It uses two tunnels:
+    a. Control Tunnel (UDP 5246): For AP-WLC communication and management.
+    b. Data Tunnel (UDP 5247): For forwarding client data traffic.
