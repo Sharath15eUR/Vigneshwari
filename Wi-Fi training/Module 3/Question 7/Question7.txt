@@ -1,0 +1,27 @@
+ 802.11 PHY layer frame :
+-> The PHY layer frame  is also called the PPDU — PLCP Protocol Data Unit.
+-> It wraps around the MAC layer frame and adds key transmission instructions.
+
+Key Components of a PHY Layer Frame: 
+ 1. Preamble : 
+->Like a "heads up" — tells the receiver, “Incoming signal!”
+->Helps the receiver detect and synchronize with the signal. It includes:
+    - Synchronization bits
+    - Training sequences to lock timing and frequency.
+
+2. PLCP Header:
+->Like a cover page — explains how to read the data that follows.
+->Tells the receiver how to decode the frame. Contains:
+     - Data rate
+     - Length of payload
+     - Modulation type
+     - Coding scheme
+
+3. PSDU (Payload)	:
+->The actual message you’re sending.
+->This is the actual data from the MAC layer (MAC frame).
+->It includes: addresses, sequence number, data, etc.
+
+4. Tail / Padding:	
+->Ensures the signal ends cleanly or aligns with encoding.
+->Used for alignment or completing final encoding blocks.
