@@ -1,1 +1,18 @@
+Issues:
+-> Poor management capablity:
+a.Each AP must be configured, monitored, and updated manually.
+b.Tedious and time-consuming to manage settings across 50+ devices.
+For example:If you need to change the SSID or security settings, you'd have to log into every AP individually.
+
+-> Configuration mismatches:
+a. Risk of configuration mismatches between APs (e.g., SSIDs, VLANs, security) which can lead to user confusion, roaming issues, or security gaps.
+
+-> Scalability Issues:
+a. As the number of APs grows, the complexity and chance of mismanagement increases.
+b. Autonomous mode is not designed for large, dynamic environments.
+
+-> Issues in roaming:
+a. Without coordination, APs can't manage fast or seamless client roaming.
+b. Users may experience disconnections or lag when moving between lecture halls or buildings.
+For example:A student walking from the library to a classroom may get dropped and need to reconnect manually.
 
