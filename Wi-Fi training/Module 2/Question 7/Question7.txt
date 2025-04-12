@@ -1,0 +1,17 @@
+-> If the WLC is deployed over a WAN, the best AP mode to use for the local network is FlexConnect Mode.
+-> FlexConnect allows an AP to maintain local switching and limited autonomy even when the WLC is located remotely .
+
+Why?
+-> Local switching:
+a.The AP can switch client traffic locally, directly into the local VLAN, instead of tunneling it back to the WLC over the WAN.
+b.This greatly reduces WAN bandwidth usage, especially for data-heavy applications.
+
+-> Continuous operation:
+a.If the WAN connection to the WLC fails, the AP can continue to maintain wireless service for clients.
+b.This is called " FlexConnect standalone operation".
+
+->Centralised anagement:
+a. While data stays local, control and configuration are still managed centrally through the WLC.
+b.This provides a balance of central control and local efficiency.
+
+
