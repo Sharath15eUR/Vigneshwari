@@ -1,0 +1,22 @@
+MIMO Vs MU-MIMO:
+
+MIMO:
+-> Multiple Input, Multiple Output
+-> Used in Wi-Fi 4 (802.11n) and above
+-> Uses multiple antennas at both transmitter and receiver.
+-> Increases data rates by transmitting multiple data streams to one device at a time.
+-> Helps improve signal strength and reliability through spatial diversity.
+-> Single-user technology — one device receives multiple streams at once.
+-> Cannot send data to multiple clients simultaneously.
+-> Boosts throughput for one user.
+
+MU-MIMO:
+-> Multi-User Multiple Input, Multiple Output
+-> Introduced in Wi-Fi 5 (802.11ac) and Improved in Wi-Fi 6 (802.11ax)
+-> Also uses multiple antennas, but serves multiple devices at the same time.
+-> Enables parallel data streams to different users simultaneously.
+-> Greatly improves network efficiency and capacity.
+-> Supports downlink in Wi-Fi 5, and both uplink & downlink in Wi-Fi 6.
+-> Ideal for environments with many connected devices.
+->Reduces wait time for each client, especially in busy networks.
+
