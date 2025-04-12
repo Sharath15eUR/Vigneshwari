@@ -1,0 +1,24 @@
+Data rate:
+-> The data rate  refers to the speed at which data is transmitted over the network. 
+->It’s typically measured in Mbps or Gbps . 
+->In  Wi-Fi, it depends upon several factors like:
+            a. modulation scheme, 
+            b.channel width
+            c.number of spatial streams
+            d.and coding rate
+
+Formula:
+  Data Rate=(Modulation Rate)×(Number of Spatial Streams)×(Channel Width)×(Coding Rate)
+
+Where ,
+
+-> Modulation determines how many bits are carried by each symbol( ex: BPSK -1 bit , QPSK -2 bits etc.)
+-> multiple data streams to be sent simultaneously and each stream can carry independent data. (Ex: 1 stream: Data is sent to/from one antenna & 2 streams: Data is sent to/from two antennas, doubling the rate)
+->The width of the channel determines the number of subcarriers available for transmission.(ex: 20 MHz , 40MHz etc.)
+-> Coding Rate refers to the error correction applied to the transmission and is  represented as a ratio.(Ex: 1/2: 50% of the data is used for error correction.)
+
+
+
+
+
+
