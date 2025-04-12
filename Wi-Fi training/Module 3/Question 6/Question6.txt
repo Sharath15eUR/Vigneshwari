@@ -1,0 +1,32 @@
+Role of Guard Intervals in WLAN Transmission :
+-> A Guard Interval is a small time gap inserted between transmitted data symbols in a Wi-Fi transmission.
+-> Its main purpose is to prevent inter-symbol interference (ISI) — which occurs when delayed echoes (multipath reflections) from one symbol interfere with the next.
+
+Need:
+->In real-world wireless environments (e.g., homes, offices, campuses), signals bounce off walls and objects. These echoes can overlap with the next symbol, causing data errors.
+-> The Guard Interval absorbs these echoes, giving time for the signal to settle before the next symbol starts.
+
+Types:
+GI Type	             Duration	                  Used In
+Long GI           	  800 ns	           Default in 802.11a/g/n/ac
+Short GI (SGI) 	      400 ns	           Optional in 802.11n/ac/ax
+
+How Short Guard Interval Improves Efficiency?
+->Good signal quality.
+->Low multipath interference.
+->Short to moderate distance from AP.
+->Reduces wasted time between symbols.
+->Increases the number of symbols transmitted per second.
+-> Leads to ~10–11% throughput improvement.
+ 
+example: 
+-> Each OFDM symbol consists of:
+            Data part: 3.2µs
+            Guard Interval (GI): 0.8 µs or 0.4 µs
+So total time per symbol is:
+ 
+GI Type	          Symbol Time (µs)
+Long GI       	3.2 + 0.8 = 4.0 µs
+Short GI	      3.2 + 0.4 = 3.6 µs 
+So, each symbol takes less time with short GI.Thus, higher speed.
+
