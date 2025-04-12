@@ -1,1 +1,8 @@
+CAPWAP is responsible for managing communication between an Access Point (AP) and a Wireless LAN Controller (WLC). After the AP successfully connects to the controller, a secure tunnel is established to carry both control and data traffic.
+
+-> The tunnel is secured using DTLS, ensuring that all control messages are encrypted for safety.
+-> To maintain the connection, the AP and WLC exchange regular keep-alive messages.
+-> If these messages stop, the WLC assumes the AP has disconnected and may release resources or attempt to re-establish the connection.
+-> The tunnel remains active even when configuration changes occur or users roam between different APs, eliminating the need for constant re-authentication.
+-> CAPWAP sets up two separate tunnels—one for control traffic and another for data—which improves management and helps maintain network stability.
 
