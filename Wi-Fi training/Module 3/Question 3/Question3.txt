@@ -1,0 +1,25 @@
+Modulation:
+-> modulation is the process of encoding digital data onto radio waves for transmission. 
+-> The PHY layer of the OSI model handles this process in Wi-Fi.
+-> Modulation changes aspects of a carrier wave (like amplitude, frequency, or phase) to represent binary data.
+->There are two types of modulation namely Digital and Analog modulation.
+
+
+Modulation schemes:
+Modulation     	Bits per Symbol	          Used In	           Speed            	Reliability
+BPSK	                   1          	802.11a/b/g/n	          Low	            Very reliable (strong signals)
+QPSK	                   2	          802.11a/g/n/ac	     Low–Medium	        Good in moderate SNR
+16-QAM	                 4	          802.11a/g/n/ac	        Medium	           Needs better SNR
+64-QAM	                 6	           802.11n/ac              	High	           Needs high SNR
+256-QAM	                 8	           802.11ac        	     Very high	      Very sensitive to noise
+1024-QAM	              10	          802.11ax (Wi-Fi 6)	   Ultra high	      Excellent signal required
+4096-QAM	              12	          802.11be (Wi-Fi 7)	   Extremely high	  Requires perfect conditions
+where, 
+BPSK-Binary Phase Shift Keying - The carrier signal changes phase between 0° and 180° to represent a 0 or 1.
+QPSK-Quadrature Phase Shift Keying - Uses 4 phase shifts (0°, 90°, 180°, 270°) to encode 2 bits per symbol.
+QAM- Quadrature Amplitude Modulation - Combines phase and amplitude changes.
+SNR - signal to noise ratio
+
+Observations:
+-> Higher modulations (QAM ) = higher speed, but need stronger, cleaner signals.
+-> Lower-order modulations (like BPSK or QPSK)  = Lower speeds ,More robust in poor signal or long-distance conditions.
