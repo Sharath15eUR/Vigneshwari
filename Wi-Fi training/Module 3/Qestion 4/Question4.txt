@@ -1,0 +1,22 @@
+OFDM:
+-> OFDM stands for Orthogonal Frequency Division Multiplexing .
+-> it’s one of the key technologies behind modern Wi-Fi (used in standards like 802.11a/g/n/ac/ax).
+-> It plays a critical role in improving speed, reliability, and efficiency of wireless communication.
+
+Working:
+-> Instead of sending all data on one high-speed channel ,OFDM splits the data into multiple slower parallel streams, each sent on its own narrow subcarrier, which are as follows:
+     a.Orthogonal (mathematically spaced to avoid interference)
+     b.Sent simultaneously
+     c.Each modulated with BPSK, QPSK, or QAM
+
+How OFDM Improves WLAN Performance:
+-> OFDM handles reflections  well, which is common in indoors.
+-> It allows parallel data transmission using many subcarriers — boosting throughput.
+-> Subcarriers are tightly packed with no overlap , maximizing use of bandwidth.
+-> Supports forward error correction (FEC) to recover from transmission errors.
+->Can operate well even in noisy or interference-prone environments.
+
+Example:
+-> In 802.11a/g/n:
+  OFDM uses 64 subcarriers (48 for data, 4 for pilot, rest for guard bands)
+  Each subcarrier carries its own modulated data stream. This allows even small chunks of the signal to be decoded, improving reliability.
