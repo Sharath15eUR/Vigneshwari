@@ -1,0 +1,24 @@
+OFDM vs OFDMA:
+
+OFDM:
+->Orthogonal Frequency Division Multiplexing
+->Used in Wi-Fi 4/5 (802.11a/g/n/ac)
+->Splits the channel into many subcarriers.
+->All subcarriers are used to serve one user at a time.
+->Designed for single-user transmission.
+->Higher latency in multi-user environments.
+->Works well for large data transfers (e.g., video, downloads).
+->Less efficient in high-density networks.
+->Cannot allocate parts of the channel to different users simultaneously.
+
+OFDMA:
+->Orthogonal Frequency Division Multiple Access
+->Introduced in Wi-Fi 6 (802.11ax)
+->Splits the channel into subcarriers and groups them into Resource Units (RUs).
+->Allows multiple users to transmit/receive simultaneously using different RUs.
+->Designed for multi-user environments.
+->Lower latency, especially with small data packets.
+->Ideal for high-density deployments and IoT devices.
+->More efficient channel utilization.
+->Greatly improves performance in crowded networks (e.g., schools, airports, stadiums).
+
