@@ -1,0 +1,24 @@
+1. PPDU :
+-> PLCP Protocol Data Unit
+-> The actual frame transmitted over the air at the PHY layer.
+-> It contains:
+      a.The PLCP preamble (for sync & channel estimation),
+      b.The PLCP header (info about the frame),
+      c.the PSDU (the MAC layer data payload).
+-> It is the complete package that includes instructions + data.
+
+2. PLCP :
+-> Physical Layer Convergence Protocol
+-> It's a sublayer of the PHY layer.
+-> It is Responsible for:
+     a. Converting the MAC frame into the PPDU.
+     b.Adding the preamble and PHY header.
+     c.Helps the receiving station synchronize and understand how to decode the incoming data.
+
+3. PMD :
+-> Physical Medium Dependent
+-> This is the lowest part of the PHY layer.
+-> Handles the actual transmission and reception of radio signals.
+->Converts digital data into radio waves (modulation) and vice versa (demodulation).
+-> Deals with:
+       Frequency,Modulation types,Signal power, antenna functions, etc.
