@@ -1,0 +1,16 @@
+Block ACK :
+-> The Block Acknowledgment (Block Ack) mechanism is used in wireless networks to improve efficiency when transmitting multiple frames of data. 
+-> Instead of acknowledging each individual frame, the receiver sends one acknowledgment for a group of frames, reducing the number of ACK frames required.
+
+Working: 
+-> When multiple frames are transmitted, the receiver sends a single block acknowledgment that confirms the successful reception of all frames in that block. 
+-> It uses a bitmap to indicate which frames were successfully received and which ones need retransmission.
+
+Use case :
+-> This is typically used in TCP connections over Wi-Fi, where multiple packets are sent in sequence and the receiver acknowledges them collectively.
+
+Advantages:
+-> Reduced Overhead: Instead of sending an acknowledgment for each individual frame, only one acknowledgment is sent for a block of frames, reducing the number of control frames and lowering network overhead.
+-> Improved Throughput: With fewer ACKs to send, the overall transmission rate is more efficient, allowing more data to be transmitted in a given time period.
+-> Better Performance in High-Latency or High-Traffic Networks: Block ACK helps mitigate delays associated with frequent individual ACKs, which can be a significant issue in high-latency or high-traffic environments.
+-> Reduced Channel Contention: By minimizing the number of ACKs, Block ACK helps reduce channel congestion and improves the performance of wireless networks.
