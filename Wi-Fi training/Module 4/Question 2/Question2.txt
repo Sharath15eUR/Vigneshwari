@@ -1,0 +1,33 @@
+MAC frame:
+-> The MAC layer frame consists of 9 fields.
+1. Frame Control (FC)
+The Frame Control field is 2 bytes long and provides essential control information, including the frame’s type. It includes several subfields:
+a. Version (2 bits): Indicates the protocol version, currently fixed at 0.
+b. Type (2 bits): Specifies the primary purpose of the frame—whether it's a management (00), control (01), or data (10) frame. The value 11 is reserved for future use.
+c. Subtype (4 bits): Defines the specific kind of frame, e.g., 0000 for an association request or 1000 for a beacon.
+d. To DS (1 bit): Set to 1 if the frame is destined for the distribution system (DS).
+e. From DS (1 bit): Set to 1 if the frame originates from the distribution system.
+f. More Fragments (1 bit): When set, it indicates that additional fragments will follow this frame.
+g. Retry (1 bit): Used to indicate that the current frame is a retransmission of a previously sent frame.
+h. Power Management (1 bit): Tells whether the station will enter power-saving mode after this transmission. A value of 1 means power-saving mode; 0 means it stays active.
+i. More Data (1 bit): Informs the recipient that more frames are waiting. Access points can use this to notify sleeping stations that additional data is buffered.
+j. WEP (1 bit): Indicates if 802.11 encryption (WEP) is enabled for this frame.
+k. Order (1 bit): If set, the receiver must process frames strictly in the order they arrive.
+
+2. Duration/ID
+This 4-byte field (sometimes referred to as 2 bytes depending on context) specifies how long the channel will be reserved for this transmission, measured in microseconds (µs).
+
+3. Address Fields (Address 1–4)
+Each address field is 6 bytes (48 bits) and stores standard IEEE MAC addresses. The specific meaning of each address depends on the To DS and From DS flags in the Frame Control field.
+
+4. Sequence Control (SC)
+A 16-bit field divided into:
+a. Sequence Number (12 bits): Helps identify and order frames.
+b. Fragment Number (4 bits): Used for reassembling frames split into fragments.
+This field ensures reliable delivery by identifying duplicates and assisting in frame reordering.
+
+5. Data
+A variable-length section containing the actual payload or information being sent. Its content depends on the frame subtype and is passed transparently from sender to receiver.
+
+6. CRC (Cyclic Redundancy Check)
+A 4-byte field holding a 32-bit checksum used for detecting errors during transmission. It ensures the integrity of the frame upon arrival.
