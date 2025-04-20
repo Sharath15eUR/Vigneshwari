@@ -1,0 +1,40 @@
+MAC methodologies:
+-> Medium Access Control (MAC) is a sublayer of the Data Link Layer (Layer 2) in the OSI model.
+-> Its primary role is to regulate how multiple devices share the communication medium and avoid collisions or data corruption.
+
+Methodologies:
+1. Random Access (Contention-Based) :
+-> Devices compete to access the communication medium. 
+-> This method is used when network traffic is unpredictable.
+->  CSMA/CD (Carrier Sense Multiple Access with Collision Detection) 
+* Used in Ethernet networks. Devices listen to the medium before transmitting. 
+* If two devices transmit at the same time, causing a collision, they detect it and then wait for a random period before trying again.
+* This method is efficient in wired networks but not ideal for wireless environments.
+-> CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) 
+* Used in Wi-Fi networks. 
+* Devices check if the medium is clear before transmitting.
+* It employs acknowledgments (ACKs), Request to Send (RTS), and Clear to Send (CTS) signals to reduce the likelihood of collisions.
+* It’s commonly used in wireless networks where collision detection isn’t feasible.
+
+2. Controlled Access (Deterministic Access) 
+-> Access to the communication medium is regulated, ensuring no collisions.
+-> Polling 
+* A central controller, such as an access point (AP) or base station, asks each device if it has data to send. 
+* Devices can only transmit when requested.
+* While this method is predictable, it can introduce delays and overhead.
+-> Token Passing 
+* A special data packet, called a token, circulates through the network. 
+* Only the device holding the token is allowed to transmit.
+* This method is used in Token Ring and FDDI networks, though it is rarely used today.
+
+3. Channelization (Multiplexing-Based Access)
+-> The medium is divided into separate logical channels, and each device is assigned its own segment.
+-> FDMA (Frequency Division Multiple Access) 
+* The frequency spectrum is split into smaller sub-channels, with each device allocated a specific frequency.
+* This method is commonly used in older cellular and satellite systems.
+-> TDMA (Time Division Multiple Access) 
+* Time is divided into slots, and devices take turns transmitting during their designated time slots. 
+* This method is used in technologies like GSM and Bluetooth.
+-> CDMA (Code Division Multiple Access) 
+* Devices transmit simultaneously on the same frequency, but each uses a unique code to differentiate the signals. 
+* This approach is used in 3G cellular networks.
