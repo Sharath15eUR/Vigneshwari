@@ -1,0 +1,29 @@
+Client association process:
+-> The association process is how a client device (STA) connects to a Wi-Fi network through an AP. 
+-> It typically follows these three main steps:
+a. Scanning
+b. Authentication
+c. Association
+
+ 1. Scanning (Discovery Phase)
+-> The client searches for available networks using:
+a. Passive Scanning – listens for beacon frames.
+b. Active Scanning – sends probe requests.
+-> Gathers information like SSID, signal strength, supported rates, and security settings.
+
+2. Authentication
+-> The client sends an authentication request to the AP.
+-> The AP responds with an authentication response.
+-> In open system authentication, this step is a formality (no password exchange yet).
+-> In shared key authentication, a challenge-response mechanism is used (older WEP-based).
+
+3. Association
+-> After successful authentication, the client sends an association request.
+-> Includes supported data rates, capabilities, and SSID.
+-> The AP replies with an association response (success or failure).
+
+4. 4- way handshake
+-> Happens if the network uses WPA/WPA2/WPA3 security.
+-> Exchanges keys to establish an encrypted connection.
+
+Once associated, the client is logically connected to the AP.
