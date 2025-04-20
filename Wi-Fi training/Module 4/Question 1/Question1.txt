@@ -1,0 +1,17 @@
+MAC : 
+-> MAC is a sublayer of the data link layer of the OSI reference model for data transmission.
+-> It is responsible for flow control and multiplexing for transmission medium.
+-> It controls the transmission of data packets via remotely shared channels. 
+-> It sends data over the network interface card.
+
+Significance:
+-> Determines who gets to transmit data over the shared communication medium (like Ethernet or Wi-Fi). Thus , it avoids collision.
+-> It helps in data framing and adds MAC addresses for source and destination.
+-> Uses MAC addresses to identify devices on the same network segment.
+-> Adds error-checking data (like CRC) to detect transmission errors.
+-> Ensures Coordination on Shared Media
+
+Exampls:
+-> Ethernet
+-> Wi-Fi (802.11)
+-> Bluetooth
