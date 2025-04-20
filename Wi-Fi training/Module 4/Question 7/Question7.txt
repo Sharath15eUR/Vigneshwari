@@ -1,0 +1,44 @@
+Power saving mode:
+-> The Power Saving mechanism in the MAC layer allows a station (STA) to reduce energy consumption by switching between:
+  a. Active Mode – fully powered and able to send/receive.
+  b. Sleep Mode (Doze) – shuts down the radio to save power when not actively communicating.
+
+Process:
+-> A station informs the AP that it’s entering power-saving mode by setting the Power Management bit in its frame.
+-> The AP begins buffering any incoming frames meant for that STA.
+-> Beacon frames, which the AP sends at regular intervals, include a Traffic Indication Map (TIM).
+-> The TIM shows which STAs have pending data at the AP.
+-> The STA periodically wakes up to check these beacon frames.
+-> If its Association ID (AID) appears in the TIM:
+-> It sends a PS-Poll frame to request the data.
+-> The AP transmits the buffered frame and, if additional frames are pending, sets the More Data bit.
+
+Types:
+1. Legacy Power Save Mode (802.11)
+-> The STA sleeps and periodically wakes to listen to TIMs in beacon frames.
+-> It requests buffered data using PS-Poll.
+-> This method is simple but can introduce delays and inefficiency when multiple frames are involved.
+
+2. Unscheduled Automatic Power Save Delivery (U-APSD)
+-> Part of Wi-Fi Multimedia (WMM) enhancements.
+-> Common in voice and video applications.
+-> The STA initiates delivery by sending an uplink frame.
+-> The AP responds by delivering all queued packets, eliminating the need for PS-Poll.
+-> Improves responsiveness and conserves energy for real-time traffic.
+
+3. Scheduled Automatic Power Save Delivery (S-APSD)
+-> Also part of WMM Power Save.
+-> The STA and AP agree on predefined delivery times.
+-> The AP transmits buffered data automatically at those intervals.
+-> Ideal for predictable and periodic traffic.
+
+4. Target Wake Time (TWT) – 802.11ax (Wi-Fi 6)
+-> The STA and AP negotiate specific wake-up times.
+-> The STA sleeps and only wakes during those agreed TWT intervals.
+-> Greatly reduces power usage and channel contention.
+-> Especially useful for IoT devices and environments with many clients.
+
+5. Listen Interval (Infrastructure Mode)
+-> The STA tells the AP how often it plans to wake up to receive beacons.
+-> The AP buffers data until that time.
+->Helps the STA conserve battery without missing important data.
