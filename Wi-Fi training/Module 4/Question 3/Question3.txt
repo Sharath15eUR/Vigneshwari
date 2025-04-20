@@ -1,0 +1,29 @@
+MAC layer functionalities :
+
+1. Managemnet plane:
+-> Handles network organization and maintenance
+-> Responsible for setting up, maintaining, and tearing down wireless connections.
+-> Functions:
+a. Association / Reassociation  : 	Stations (clients) associate or re-associate with APs to join or maintain network connectivity.
+b. Authentication / Deauthentication : 	Validates a station's identity before joining the network. Deauthentication ends the connection.
+c. Measurement Requests/Reports : 	Stations can request or send measurements (e.g., channel info, interference).
+d. Probe Request/Response : 	Stations search for available networks; APs respond with info (SSID, capabilities).
+
+2. Control plane: 
+-> Handles coordination and reliability.
+-> Supports reliable data delivery and medium access control.
+-> Functions:
+a. CSMA/CA Access : Manages access to the shared wireless medium using carrier sensing and backoff timers.
+b. RTS/CTS : 	Optional mechanism to avoid collisions by reserving the medium before transmission.
+c. ACK :	Confirms successful receipt of data frames.
+d. Block ACK :	Acknowledges multiple data frames in bulk to improve efficiency.
+e. Frame Fragmentation/Defragmentation :	Breaks large frames into smaller fragments and reassembles them upon receipt.
+
+3.Data plane:
+-> Handles actual data transmission.
+-> Delivers user data and manages frame formatting and addressing.
+-> Functions:
+a. Data Frame Construction : Builds 802.11 frames including MAC header, addressing, and frame body.
+b. MAC Addressing :	Uses MAC addresses to identify source, destination, transmitter, and receiver.
+c. Data Delivery :	Transfers user/application data between stations.
+d. Encryption & Decryption : Encrypts and decrypts data frames .
