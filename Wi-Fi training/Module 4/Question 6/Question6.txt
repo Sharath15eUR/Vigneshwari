@@ -1,0 +1,40 @@
+EAPOL 4-way handshake:
+-> The EAPOL 4-Way Handshake is a critical security mechanism used in WPA/WPA2/WPA3 networks to establish a secure communication channel between a client (STA) and an AP.
+-> Confirms both client and AP know the PMK (Pairwise Master Key).
+-> Derives keys used for encrypting data (PTK, GTK).
+-> Prevents replay attacks.
+-> Establishes secure wireless communication.
+
+Process:
+1. AP → STA
+-> Message: ANonce
+-> The AP sends a nonce (a random number), called ANonce, to the client.
+-> Purpose: Start the handshake and provide material to derive encryption keys.
+
+2. STA → AP
+-> Message: SNonce + MIC
+-> The client:
+   a. Generates its own random number (SNonce).
+   b. Combines ANonce + SNonce + MAC addresses + PMK to derive PTK (Pairwise Transient Key).
+   c. Sends SNonce and a MIC (Message Integrity Code) calculated using the PTK.
+-> Purpose: Show that the client has the PMK and derive encryption keys securely.
+
+3. AP → STA
+-> Message: GTK + MIC
+->The AP:
+   a. Uses the same info to derive the PTK.
+   b. Encrypts and sends the Group Temporal Key (GTK) using part of the PTK.
+   c. Includes a MIC to prove it has the correct PTK.
+-> Purpose: Deliver the group key (GTK) securely to the client.
+
+4. STA → AP
+-> Message: Acknowledgement
+-> The client sends a final ACK with a MIC.
+->  Purpose: Confirms that the GTK was successfully received and handshake completed.
+
+Keys :
+-> PMK (Pairwise Master Key) :	Shared secret generated from the pre-shared key (PSK) or EAP-based authentication.
+-> PTK (Pairwise Transient Key) : 	Key used for securing unicast traffic; derived from PMK, ANonce, SNonce, and MAC addresses.
+-> GTK (Group Temporal Key) : 	Used for encrypting broadcast/multicast traffic; shared with all clients by the AP.
+-> MIC (Message Integrity Code) :	Ensures message authenticity and integrity in handshake frames.
+
