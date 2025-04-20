@@ -1,0 +1,31 @@
+-> The terms A-MSDU, A-MPDU, and A-MSDU in A-MPDU relate to the packaging and transmission of data in the MAC layer. 
+
+1. A-MSDU (Aggregated MAC Service Data Units)
+Definiton: 
+-> A-MSDU aggregates multiple MAC Service Data Units (MSDUs) into one larger frame.
+-> An MSDU is the packet passed from upper layers (like IP or TCP) to the MAC layer for delivery.
+Structure:
+-> Multiple MSDUs are bundled into a single frame that shares one MAC header and one frame control field.
+-> Each MSDU remains separate, and they can belong to different traffic sessions.
+Advantages: 
+-> This method reduces protocol overhead by eliminating the need for multiple headers, resulting in more efficient data transmission.
+
+2. A-MPDU (Aggregated MAC Protocol Data Units)
+Definition: 
+-> A-MPDU aggregates several MAC Protocol Data Units (MPDUs) into a single transmission.
+-> An MPDU contains both the MAC header and the actual data being sent.
+Structure:
+-> Each MPDU in the A-MPDU bundle retains its own MAC header and is sent together within one physical transmission.
+-> Because of this, each MPDU can be separately acknowledged by the receiver.
+Advantages:
+-> It improves throughput by sending multiple MPDUs in one go, reducing the number of transmissions and lowering communication overhead.
+
+3. A-MSDU within A-MPDU
+Definition: 
+-> This technique merges the benefits of both A-MSDU and A-MPDU.
+-> Here, several A-MSDUs—each containing multiple MSDUs—are grouped together into a single A-MPDU frame.
+Structure: 
+-> Each A-MSDU, made up of multiple MSDUs, is encapsulated as an individual unit within an A-MPDU. 
+-> The result is a highly efficient packaging of data for transmission.
+Advantages:
+-> By using both types of aggregation, this method maximizes data throughput and minimizes protocol overhead, optimizing the use of wireless bandwidth and reducing transmission delays.
