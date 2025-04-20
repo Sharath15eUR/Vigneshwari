@@ -1,0 +1,30 @@
+Scanning process:
+-> It is process to find whether the AP's are in the range of connectivity or not.
+-> Purpose:
+a. Discover available networks (SSIDs)
+b. Gather information like channel, signal strength, capabilities.
+c. Decide which AP to associate with.
+-> There are two methods to perform Wi-Fi scanning, which are:
+a. Active scannng
+b.Passive scanning
+
+-> Active scanning:
+a. The station sends Probe Request frames on different channels.
+b. APs respond with Probe Response frames.
+c. Initiated by the client device (STA).
+d. Faster network discovery.
+e. Can detect hidden SSIDs (if SSID is included in the request).
+f. Consumes more power (due to transmission).
+g. Adds extra traffic to the wireless medium.
+h. Commonly used during roaming or initial quick connection setup.
+
+-> Passive Scanning
+a. The station listens for periodic Beacon frames broadcast by APs.
+b. No transmission from the STA.
+c.  Initiated by the client device but remains silent.
+d. Slower than active scanning (must wait for beacons).
+e.Cannot detect hidden SSIDs (since they are not broadcast).
+f. Consumes less power.
+g. No extra traffic on the network.
+h.Useful in power-saving situations or regulated environments.
+
