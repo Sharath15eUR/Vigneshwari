@@ -1,0 +1,10 @@
+6. What are the major innovations introduced in Wi-Fi 7 (802.11be)?
+
+->  Wi-Fi 7 is designed for ultra-fast, ultra-smooth, and reliable wireless experiences.
+-> Much faster speeds more than 40 Gbps.
+-> 4096-QAM modulation: Packs more data into each signal, boosting speed.
+-> 320 MHz channels: Doubles the channel width from Wi-Fi 6 for more data flow.
+-> Multi-Link Operation (MLO): Connects over multiple bands (2.4, 5, and 6 GHz) at the same time for faster, more stable connections.
+-> Improved MU-MIMO and OFDMA: Handles even more devices with lower delay.
+-> Lower latency: Great for real-time apps like gaming, AR/VR, and video calls.
+-> Better performance in crowded places.
