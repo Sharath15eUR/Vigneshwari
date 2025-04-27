@@ -1,0 +1,12 @@
+4. Significance of the 6 GHz band in Wi Fi 6E  :
+
+-> The 6 GHz frequency band in Wi-Fi 6E is a major leap forward because it offers a large, dedicated spectrum (1200 MHz) for Wi-Fi use.
+-> It is Free from interference caused by older Wi-Fi devices.
+-> Significance:
+a. Provides more non-overlapping channels - > More bandwidth  -> Use cases: for dense environments like offices, stadiums, and apartments.
+b. Wider channels ->  Easily supports 80 MHz and 160 MHz channels ->   faster data rates.
+c. Less interference and congestion ->  Low latency -> quicker responses -> Use case:  real-time apps like gaming and video calls.
+d. Higher capacity->  Supports more devices simultaneously without slowing down the network.
+e. Enhances experiences in high-demand activities -> Use cases:AR/VR, 8K video streaming, cloud computing.
+f.  Prepares networks for upcoming technologies that require faster, more reliable wireless communication.
+g. Devices operating in 6 GHz must support WPA3->  stronger encryption and better security.
