@@ -1,0 +1,8 @@
+4. Why is WEP considered insecure compared to WPA2 or WPA3?
+-> WEP is considered insecure because of the following reasons: 
+-> It uses weak encryption that can be easily cracked.
+-> The initialization vector (IV) is short, causing patterns to repeat, which makes it easier for hackers to guess the key.
+-> WEP doesn’t properly verify if the data was altered during transmission.
+-> The same key is used for a long time, making it more vulnerable to attacks.
+-> Hackers can crack WEP in just minutes using free tools.
+-> In contrast, WPA2 and WPA3 use stronger encryption (AES) and offer better security features, making them much safer than WEP.
