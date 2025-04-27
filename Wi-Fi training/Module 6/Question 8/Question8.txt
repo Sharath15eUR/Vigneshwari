@@ -1,0 +1,7 @@
+8. What will happen if we put a wrong passphrase during a 4 - way handshake?
+-> If the wrong passphrase is entered during the 4-way handshake:
+a. The client and access point will generate different Pairwise Master Keys (PMKs).
+b. Since the PMKs don't match, the Pairwise Transient Keys (PTKs) created during the handshake won’t be the same.
+c. The handshake messages will fail because the encryption won’t work properly.
+d. As a result, the connection won’t be established, and the client won’t be able to join the Wi-Fi network.
+
