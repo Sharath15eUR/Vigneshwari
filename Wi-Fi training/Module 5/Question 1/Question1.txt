@@ -1,0 +1,26 @@
+Key features of Wi Fi 6, 6E, and 7 vs. Wi Fi 5 (802.11ac)  
+
+1. Wi-Fi 5 (802.11ac)
+->Launched in 2014, operates only on 5 GHz.
+->Max speed ~3.5 Gbps, uses 256-QAM.
+-> Supports MU-MIMO (downlink only), no OFDMA.
+-> Focused mainly on boosting speed.
+
+2. Wi-Fi 6 (802.11ax)
+->Released in 2019, works on 2.4 GHz and 5 GHz.
+->Max speed ~9.6 Gbps with 1024-QAM.
+->Adds OFDMA and MU-MIMO for both directions.
+->Target Wake Time (TWT) improves device battery life.
+->Focuses on speed, capacity, and efficiency.
+
+3. Wi-Fi 6E
+->Extension of Wi-Fi 6 with the 6 GHz band.
+->Offers more channels, reduced interference.
+->Same tech upgrades (OFDMA, MU-MIMO, TWT).
+
+4. Wi-Fi 7 (802.11be)
+->Works across 2.4 GHz, 5 GHz, and 6 GHz bands.
+->Speeds > 40 Gbps with 4096-QAM and 320 MHz channels.
+->Introduces Multi-Link Operation (MLO) for parallel band use.
+->Optimized for ultra-low latency and high-demand apps like AR/VR.
+
