@@ -1,0 +1,17 @@
+6. What is the role of the Pairwise Master Key (PMK) in the 4-way handshake?
+-> Role in the 4-Way Handshake:
+The PMK is used to generate the Pairwise Transient Keys (PTK), which are the actual keys used to encrypt the data between the client  and the Aduring the session.
+
+-> Generation of PMK:
+The PMK is derived from the Wi-Fi password (pre-shared key or PSK) and the MAC addresses of the client and AP. It’s a long-term key that both the AP and device know in advance.
+
+-> 4-Way Handshake:
+During the handshake, the PMK is used in the following steps:
+a. The AP and client exchange messages to confirm they both have the same PMK.
+b. They use the PMK to create new, temporary encryption keys (the PTK) for securing the data exchange.
+c. The handshake ensures both sides have the correct keys and can start encrypting and decrypting the data securely.
+
+-> Security:
+The PMK itself is not transmitted over the network. Instead, the 4-way handshake verifies that both the client and AP have the correct PMK and can securely generate the encryption keys needed for the session.
+
+ 
