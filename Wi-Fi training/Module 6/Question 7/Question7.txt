@@ -1,0 +1,11 @@
+7. How does the 4-way handshake ensure mutual authentication between the client and the access point?
+-> The 4-way handshake ensures that both the client and AP are authenticated by doing the following:
+
+a. Both the client and the AP already share a Pairwise Master Key (PMK), which they both know.
+b. During the handshake, they each send a random number (called a nonce – ANonce from the AP and SNonce from the client).
+c. They then use the PMK, these random numbers, and their MAC addresses to create a new key called the Pairwise Transient Key (PTK).
+d. Both sides calculate the PTK separately. If they both get the same PTK, it means they both have the correct PMK.
+e. The AP sends a message that’s encrypted with this new key, and the client has to respond correctly.
+f. If both the AP and client respond correctly, it proves they both know the PMK, but it’s never actually shared over the network.
+g. This process ensures that both the client and AP are authenticated, and they can now set up a secure, encrypted connection.
+
