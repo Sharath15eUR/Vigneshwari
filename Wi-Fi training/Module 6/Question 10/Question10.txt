@@ -1,0 +1,6 @@
+10. How does 802.1X enhance Wi Fi security? 
+-> Devices must prove their identity before connecting to the network, preventing unauthorized access.
+-> It employs strong authentication methods like EAP (Extensible Authentication Protocol) for secure logins.
+->  Each connection session gets unique keys, making it harder for attackers to decrypt traffic.
+->  802.1X can control which devices are allowed to access specific parts of the network, limiting exposure.
+->  It uses a centralized server (like RADIUS) to authenticate devices, ensuring consistent security policies across the network.
