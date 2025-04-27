@@ -1,0 +1,6 @@
+5. Why was WPA2 introduced?  
+-> WPA2 was introduced to address the weaknesses of WEP and WPA, providing stronger security for Wi-Fi networks. 
+-> WEP was too weak -> WEP used outdated encryption (RC4) that could be easily cracked by hackers, leaving networks vulnerable.
+-> WPA was an improvement but still insecure -> WPA used stronger encryption (TKIP), but it was still not as secure as needed for modern wireless networks.
+-> Stronger encryption needed->  WPA2 introduced AES (Advanced Encryption Standard) for much stronger encryption, making Wi-Fi networks more secure.
+-> Improved overall security ->  WPA2 fixed several vulnerabilities in WPA, offering better protection for data, devices, and user privacy.
