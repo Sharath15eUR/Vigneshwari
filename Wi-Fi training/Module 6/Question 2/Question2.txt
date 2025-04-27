@@ -1,0 +1,11 @@
+2. Authentication vs Encrytpion :
+
+a. Authentication:
+-> What it is: This is the process of verifying the identity of devices or users trying to connect to your Wi-Fi network.
+-> Purpose: It ensures that only authorized devices (like your phone or laptop) can access the network.
+->  Example: When you enter a password (pre-shared key) or use a username and password to connect, that’s authentication.
+
+b. Encryption:
+-> What it is: This is the process of scrambling the data that travels over the Wi-Fi network so that only authorized devices can read it.
+-> Purpose: It keeps your information safe from being seen or stolen by anyone else who might intercept the Wi-Fi signal.
+-> Example: When you send a message or file over Wi-Fi, encryption ensures that only the receiver can read it, not anyone else nearby.
