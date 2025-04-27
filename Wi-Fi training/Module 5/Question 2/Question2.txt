@@ -1,0 +1,12 @@
+ 2. Role of OFDMA in Wi Fi 6  :
+
+-> OFDMA makes Wi-Fi 6 faster, smoother, and more efficient for everyone on the network.
+-> OFDMA (Orthogonal Frequency Division Multiple Access) is a key feature introduced in Wi-Fi 6 that greatly improves network efficiency, especially in busy environments.
+-> Instead of letting one device use the whole channel at a time (like older Wi-Fi versions), OFDMA splits a channel into smaller sub-channels.
+-> Multiple devices can then send or receive data simultaneously within the same channel.
+
+Pros:
+-> Reduces congestion by handling many devices at once.
+-> Lowers latency because devices don’t have to wait as long to communicate.
+->  Improves overall speed and performance, especially in places like airports, offices, or smart homes with lots of connected devices.
+ 
