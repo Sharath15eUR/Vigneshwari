@@ -1,0 +1,10 @@
+8. What is the purpose of 802.11k and v, and how does it aid in roaming?
+-> 802.11k and 802.11v are Wi-Fi standards that help improve the experience of roaming between Wi-Fi AP'S in a network, making the process smoother and faster.
+
+1. 802.11k:
+-> Purpose: Helps devices gather information about nearby access points.
+-> How it aids roaming: Devices can quickly decide which AP is best to connect to when moving around, based on signal strength and other factors.
+
+2. 802.11v:
+-> Purpose: Allows the network to send information to devices about network conditions and potential APs.
+-> How it aids roaming: It helps devices make better roaming decisions by suggesting the best time to switch APs or switching to less crowded APs.
