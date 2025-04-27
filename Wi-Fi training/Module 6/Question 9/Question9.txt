@@ -1,0 +1,6 @@
+   9. What problem does 802.1X solve in a network?  
+->  802.1X ensures only authorized devices can connect to the network.
+->  It makes sure devices prove their identity before joining the network.
+-> It uses unique encryption keys for each session, making the network more secure.
+-> 802.1X allows controlling which devices can access certain parts of the network.
+
