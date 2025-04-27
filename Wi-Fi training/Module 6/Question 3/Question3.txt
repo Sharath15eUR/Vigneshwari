@@ -1,0 +1,26 @@
+3. Differences between WEP, WPA, WPA2, WPA3  
+
+a. WEP (Wired Equivalent Privacy):
+-> Oldest and weakest security standard.
+-> Encryption: Uses a weak encryption method (RC4), which is easy to break.
+-> Security: Vulnerable to attacks, so it’s not safe to use today.
+-> Best for: Avoiding – it should no longer be used.
+
+b. WPA (Wi-Fi Protected Access):
+-> Introduced as a fix for WEP.
+-> Encryption: Uses TKIP (Temporal Key Integrity Protocol), which was an improvement over WEP but still not very secure.
+-> Security: Better than WEP, but still has weaknesses, especially against modern hacking methods.
+-> Best for: Better than WEP, but still not recommended for today’s needs.
+
+c. WPA2 (Wi-Fi Protected Access 2):
+-> Most common standard used today.
+-> Encryption: Uses AES (Advanced Encryption Standard), which is much stronger and more secure.
+-> Security: Strong and reliable, widely used for home and business networks.
+-> Best for: Most current Wi-Fi networks (still a good choice, though WPA3 is better).
+
+d. WPA3 (Wi-Fi Protected Access 3):
+-> Newest and most secure standard.
+-> Encryption: Uses stronger encryption methods (AES with 256-bit keys) and improved protection against brute-force attacks.
+-> Security: Offers enhanced protection, especially for public networks, and better defense against password guessing attacks.
+-> Best for: Modern networks, especially for higher security (homes, offices, and public Wi-Fi).
+
