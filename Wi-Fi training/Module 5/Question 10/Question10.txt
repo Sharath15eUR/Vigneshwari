@@ -1,0 +1,6 @@
+10. How do 802.11k/v/r work together to provide seamless roaming in enterprise networks?
+-> 802.11k, 802.11v, and 802.11r work together to enable seamless roaming in enterprise networks by improving how devices move between access points (APs).
+-> 802.11k helps by gathering information about nearby APs, allowing the device to assess which one is best to connect to.
+-> 802.11v gives the network the ability to manage the roaming process, guiding the device to the optimal AP based on factors like signal strength and network load.
+-> 802.11r ensures a smooth transition between APs by pre-authenticating the device and sharing security credentials in advance, reducing delays and disruptions during the handoff.
+
