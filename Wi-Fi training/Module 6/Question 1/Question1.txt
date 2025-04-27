@@ -1,0 +1,12 @@
+1. Pillars of wifi security:
+-> Encryption:
+This makes sure that the data you send over Wi-Fi is hidden and unreadable to anyone who shouldn’t see it.
+-> Authentication:
+This checks that only trusted devices or users can connect to your network.
+-> Access Control:
+This limits who can connect to your Wi-Fi by setting rules on who gets access.
+-> Integrity:
+This makes sure the data sent over the network isn’t changed or tampered with during transmission.
+
+
+
