@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+#define TRUE 1
+#define FALSE 0
+typedef int bool;
+
+bool findKey(int mat[][100], int size, int target) {
+    int i = 0;
+    int j = size - 1;
+
+    while (i < size && j >= 0) {
+        if (mat[i][j] == target) {
+            return TRUE;
+        } else if (mat[i][j] > target) {
+            j--;  // move left
+        } else {
+            i++;  // move down
+        }
+    }
+    return FALSE;
+}
+
+int main() {
+    int n, key;
+    int matrix[100][100];
+
+    printf("Enter the size of the square matrix (n): ");
+    scanf("%d", &n);
+
+    printf("Enter the elements of the %d x %d matrix row by row (separated by spaces):\n", n, n);
+    for (int row = 0; row < n; row++) {
+        printf("Row %d: ", row + 1);
+        for (int col = 0; col < n; col++) {
+            scanf("%d", &matrix[row][col]);
+        }
+    }
+
+    printf("Enter the key to search: ");
+    scanf("%d", &key);
+
+    if (findKey(matrix, n, key)) {
+        printf("Key found in the matrix.\n");
+    } else {
+        printf("Key not found in the matrix.\n");
+    }
+
+    return 0;
+}
