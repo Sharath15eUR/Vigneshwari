@@ -1,0 +1,37 @@
+1. Child Process - fork()
+-> The fork() system call in Unix-like operating systems creates a new process, known as the child process, which runs concurrently with the parent process. 
+-> The child process is an exact copy of the parent at the time of creation, sharing the same program counter, CPU registers, and open files. 
+-> The return value of fork() helps differentiate between the parent and child processes:
+a. Negative value (-1): Fork failed.
+b. Zero (0): Returned to the child process.
+c. Positive value: Returned to the parent process, representing the child's process ID.
+
+
+2. Handling Common Signals
+-> Signals are software-generated interrupts sent to a process by the OS or another process. Some common signals include:
+a. SIGINT (2): Interrupt signal (Ctrl+C).
+b. SIGTERM (15): Termination request.
+c.SIGSEGV (11): Segmentation fault (invalid memory access).
+d. SIGKILL (9): Forceful termination. Processes can handle signals using custom signal handlers, allowing controlled responses instead of default termination.
+
+
+3. Exploring Different Kernel Crashes
+-> Kernel crashes occur due to hardware failures, memory corruption, or software bugs. Some common types include:
+a.Null pointer dereference: Accessing invalid memory.
+b.Deadlocks: Improper synchronization leading to system hang.
+c.Stack overflow: Excessive recursion or memory allocation.
+d.Kernel panic: A critical failure causing the system to halt. Crash dumps (vmcore) help analyze the cause of kernel failures using tools like kdump and crash.
+
+
+4.Time Complexity
+-> Time complexity measures the efficiency of an algorithm based on input size. Common complexities include:
+a. O(1): Constant time (e.g., accessing an array element).
+b. O(log n): Logarithmic time (e.g., binary search).
+c. O(n): Linear time (e.g., iterating through an array).
+d. O(n²): Quadratic time (e.g., nested loops). Understanding time complexity helps optimize algorithms for better performance.
+
+
+5. Locking Mechanism - Mutex vs. Spinlock
+-> Locks prevent race conditions in concurrent programming:
+a. Mutex: A blocking mechanism where a thread waits if the lock is held by another thread. It reduces CPU usage but involves context switching.
+b. Spinlock: A non-blocking mechanism where a thread continuously checks for lock availability. It is efficient for short waits but wastes CPU cycles if held for long.
