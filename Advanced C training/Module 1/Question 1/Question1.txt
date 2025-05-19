@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <string.h>
+
+#define DAYS 7
+#define TASKS 3
+#define LEN 100
+
+struct Day {
+    char name[10];
+    char tasks[TASKS][LEN];
+    int count;
+};
+
+int main() {
+    struct Day week[DAYS] = {
+        {"Monday"}, {"Tuesday"}, {"Wednesday"},
+        {"Thursday"}, {"Friday"}, {"Saturday"}, {"Sunday"}
+    };
+
+    int choice;
+    char input[10];
+
+    do {
+        printf("\n1. Add New Task\n2. Display Tasks\n3. Exit\nEnter your choice : ");
+        scanf("%d", &choice);
+
+        if (choice == 1) {
+            printf("Enter day : ");
+            scanf("%s", input);
+
+            int found = 0;
+            for (int i = 0; i < DAYS; i++) {
+                if (strcasecmp(input, week[i].name) == 0) {
+                    found = 1;
+                    if (week[i].count >= TASKS) {
+                        printf("Task limit reached for %s!\n", week[i].name);
+                        break;
+                    }
+
+                    for (int j = week[i].count; j < TASKS; j++) {
+                        printf("Enter your Task for %s : ", week[i].name);
+                        getchar(); // consume newline
+                        fgets(week[i].tasks[j], LEN, stdin);
+                        week[i].tasks[j][strcspn(week[i].tasks[j], "\n")] = 0;
+
+                        if (strlen(week[i].tasks[j]) == 0) break;
+
+                        week[i].count++;
+                        printf("\nTask Added successfully!\n");
+                        printf("You can add %d tasks for %s\n", TASKS - week[i].count, week[i].name);
+
+                        if (week[i].count == TASKS) break;
+                    }
+                    break;
+                }
+            }
+            if (!found) {
+                printf("Invalid day entered!\n");
+            }
+
+        } else if (choice == 2) {
+            printf("\nTasks for the Week :\n");
+            for (int i = 0; i < DAYS; i++) {
+                printf("\n———%s———\n", week[i].name);
+                if (week[i].count == 0) {
+                    printf("  No tasks\n");
+                } else {
+                    for (int j = 0; j < week[i].count; j++) {
+                        printf("  - %s\n", week[i].tasks[j]);
+                    }
+                }
+            }
+        }
+
+    } while (choice != 3);
+
+    return 0;
+}
